@@ -47,6 +47,8 @@ export default function Home() {
     };
 
     fetchRandomImage();
+
+    document.title = "Daniel's Personal Website";
   }, []);
 
   return (

@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import * as React from "react";
 import DrawerAppBar from "./nav";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,13 +14,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="UTF-8" />
-        <meta name="description" content="Daniel Gaio's personal website" />
-        <title>Daniel Gaio</title>
-      </Head>
-
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
           {/* Fixed position header */}
