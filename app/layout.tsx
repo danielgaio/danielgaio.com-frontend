@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import * as React from "react";
 import DrawerAppBar from "./nav";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,6 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <GoogleAnalytics />
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
           {/* Fixed position header */}
