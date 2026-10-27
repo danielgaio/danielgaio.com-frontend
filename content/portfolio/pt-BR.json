@@ -1,0 +1,79 @@
+{
+  "locale": "pt-BR",
+  "publicationStatus": "draft",
+  "ownerReviewRequired": true,
+  "sourceAsOf": "2026-09-17",
+  "hero": {
+    "name": "Daniel Gaio",
+    "headline": "Software, dados e IA para resolver problemas reais.",
+    "summary": "Sou engenheiro de computação, com experiência em software para serviços financeiros, automação e IA aplicada. Aqui reúno o que construo, as decisões por trás dos projetos e o que aprendo pelo caminho.",
+    "workAction": "Conheça meu trabalho",
+    "writingAction": "Leia meus artigos"
+  },
+  "story": {
+    "heading": "De entender um problema a construir uma solução útil",
+    "paragraphs": [
+      "Minha trajetória conecta engenharia de computação com software e automação em serviços financeiros. Nessas experiências, trabalhei com APIs de backend, integração de dados, suporte à produção e documentação técnica.",
+      "O ProsperSync é o espaço em que exploro um produto próprio: uma aplicação de finanças pessoais que combina o registro de despesas por imagens e voz com análises financeiras por conversa. Construí-lo também envolve conectar serviços de IA ao produto e trabalhar na configuração compartilhada e na automação das entregas.",
+      "Este site é meu próximo projeto de aprendizado. Estou construindo com TypeScript, Node.js e AWS, com exercícios práticos de segurança, confiabilidade, observabilidade e sistemas distribuídos. Quero mostrar as decisões, as escolhas e os aprendizados conforme o trabalho evolui."
+    ]
+  },
+  "work": {
+    "heading": "Trabalhos em destaque",
+    "items": [
+      {
+        "id": "financial-services",
+        "title": "Engenharia em serviços financeiros",
+        "context": "Sicredi Liberdade",
+        "summary": "Experiência com APIs de backend, automação em Python, integração de dados, suporte à produção e documentação técnica.",
+        "detailPrompt": "Um problema específico, minha contribuição e o resultado serão incluídos após a confirmação de um caso que possa ser compartilhado publicamente."
+      },
+      {
+        "id": "prospersync",
+        "title": "ProsperSync: de uma imagem ou mensagem de voz a uma despesa",
+        "context": "Projeto pessoal · Engenharia de produto",
+        "summary": "Construção da experiência de registro de despesas de uma aplicação de finanças pessoais, usando imagens e voz como entradas. Esse trabalho reúne a aplicação em Next.js, PostgreSQL e OpenAI.",
+        "linkLabel": "Visite o ProsperSync",
+        "url": "https://prospersync.com"
+      },
+      {
+        "id": "prospersync-ai-service",
+        "title": "ProsperSync: conectando a análise com IA ao produto",
+        "context": "Projeto pessoal · Integração de backend e entrega",
+        "summary": "Desenvolvimento de um serviço de análise financeira com Python, FastAPI e LangGraph, com configuração compartilhada de modelos e integração com provedores. O trabalho de entrega também inclui automação da implantação de funções da aplicação e de migrações do banco de dados.",
+        "detailPrompt": "Desenvolver um estudo de caso sobre a separação do serviço, as decisões de configuração e o fluxo de entrega, usando exemplos que possam ser compartilhados e resultados observados."
+      }
+    ]
+  },
+  "education": {
+    "heading": "Formação",
+    "degree": "Bacharelado em Engenharia de Computação",
+    "institution": "Universidade Federal do Pampa (Unipampa)",
+    "period": "2015–2021"
+  },
+  "learning": {
+    "heading": "Aprender construindo na AWS",
+    "summary": "Este site é um projeto de aprendizado em AWS e também um portfólio. Os exercícios planejados abordarão origens privadas, comportamento de cache, recuperação de versões e observabilidade, com registro dos custos e da limpeza dos recursos.",
+    "status": "Em andamento; o novo site ainda não foi lançado na AWS."
+  },
+  "writing": {
+    "heading": "Artigos",
+    "summary": "Notas técnicas, experimentos e aprendizados sobre o que construo.",
+    "migrationNote": "Os artigos existentes no Medium manterão o idioma original. Uma tradução será vinculada somente quando existir."
+  },
+  "contact": {
+    "heading": "Vamos conversar",
+    "links": [
+      {
+        "id": "linkedin",
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/daniel-gaio/"
+      },
+      {
+        "id": "github",
+        "label": "GitHub",
+        "url": "https://github.com/danielgaio"
+      }
+    ]
+  }
+}
