@@ -1,0 +1,159 @@
+{
+  "verifiedAt": "2026-10-27",
+  "status": "proposed-incremental-scenario-not-a-bill-forecast",
+  "currency": "USD",
+  "originRegion": "us-east-1",
+  "viewerRegion": "South America",
+  "freeTierAndCreditsApplied": false,
+  "assumptions": [
+    "No authenticated current usage or billing inventory available.",
+    "All quantities are per month; values are scenario assumptions, not traffic forecasts.",
+    "Existing costs, taxes, currency conversion, registrar/Medium/Codex costs and optional unpriced services are excluded.",
+    "Optional Route 53 costs are included in the conservative total although preview retains current DNS.",
+    "The paid CloudFront Function rate is deliberately applied to all executions, ignoring its zero-priced tier.",
+    "100 build minutes includes retries, provisioning/install time and per-build rounding; compute suitability remains to be measured.",
+    "The paid invalidation rate is applied to all modeled paths, ignoring the zero-priced allowance."
+  ],
+  "items": [
+    {
+      "description": "S3 Standard storage, including versions, logs and build artifacts",
+      "quantity": 5,
+      "unit": "GB-Mo",
+      "usdPerUnit": "0.0230000000",
+      "estimatedUsd": 0.115,
+      "sku": "WP9ANXZGBYYSGJEA",
+      "rateCode": "WP9ANXZGBYYSGJEA.JRTCKXETXF.PGHJ3S3EYE",
+      "catalogPublicationDate": "2026-10-15T17:35:40Z",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/us-east-1/index.json"
+    },
+    {
+      "description": "S3 PUT/COPY/POST/LIST",
+      "quantity": 10000,
+      "unit": "Requests",
+      "usdPerUnit": "0.0000050000",
+      "estimatedUsd": 0.05,
+      "sku": "E9YHNFENF4XQBZR6",
+      "rateCode": "E9YHNFENF4XQBZR6.JRTCKXETXF.6YS6EN2CT7",
+      "catalogPublicationDate": "2026-10-15T17:35:40Z",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/us-east-1/index.json"
+    },
+    {
+      "description": "S3 GET and other Tier2 requests",
+      "quantity": 20000,
+      "unit": "Requests",
+      "usdPerUnit": "0.0000004000",
+      "estimatedUsd": 0.008,
+      "sku": "ZWQ6Q48CRJXX4FXE",
+      "rateCode": "ZWQ6Q48CRJXX4FXE.JRTCKXETXF.6YS6EN2CT7",
+      "catalogPublicationDate": "2026-10-15T17:35:40Z",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/us-east-1/index.json"
+    },
+    {
+      "description": "CloudFront South America transfer out",
+      "quantity": 10,
+      "unit": "GB",
+      "usdPerUnit": "0.1100000000",
+      "estimatedUsd": 1.1,
+      "sku": "ZT3N6V49SHDM9P3G",
+      "rateCode": "ZT3N6V49SHDM9P3G.JRTCKXETXF.Q3Z75P77EN",
+      "catalogPublicationDate": "2026-10-19T15:05:00Z",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonCloudFront/current/index.json"
+    },
+    {
+      "description": "CloudFront South America HTTPS requests",
+      "quantity": 100000,
+      "unit": "Requests",
+      "usdPerUnit": "0.0000022000",
+      "estimatedUsd": 0.22,
+      "sku": "FUWQBJC8EW2AP9J4",
+      "rateCode": "FUWQBJC8EW2AP9J4.JRTCKXETXF.6YS6EN2CT7",
+      "catalogPublicationDate": "2026-10-19T15:05:00Z",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonCloudFront/current/index.json"
+    },
+    {
+      "description": "CloudFront route rewrite function executions",
+      "quantity": 100000,
+      "unit": "FunctionExecutions",
+      "usdPerUnit": "0.0000001000",
+      "estimatedUsd": 0.01,
+      "sku": "QAZUUEJG8GARJCET",
+      "rateCode": "QAZUUEJG8GARJCET.JRTCKXETXF.VQ39PKQRBK",
+      "catalogPublicationDate": "2026-10-19T15:05:00Z",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonCloudFront/current/index.json"
+    },
+    {
+      "description": "CloudFront invalidation paths, paid rate applied without allowance",
+      "quantity": 10,
+      "unit": "URL",
+      "usdPerUnit": "0.0050000000",
+      "estimatedUsd": 0.05,
+      "sku": "U3HVZF9WJEM7TE55",
+      "rateCode": "U3HVZF9WJEM7TE55.JRTCKXETXF.MUBTP6UPGZ",
+      "catalogPublicationDate": "2026-10-19T15:05:00Z",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonCloudFront/current/index.json"
+    },
+    {
+      "description": "CodeBuild Linux x86 small build minutes",
+      "quantity": 100,
+      "unit": "minutes",
+      "usdPerUnit": "0.0050000000",
+      "estimatedUsd": 0.5,
+      "sku": "4Z79XP69AGHXE3C7",
+      "rateCode": "4Z79XP69AGHXE3C7.JRTCKXETXF.6YS6EN2CT7",
+      "catalogPublicationDate": "2026-09-11T12:46:25Z",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/CodeBuild/current/us-east-1/index.json"
+    },
+    {
+      "description": "CloudWatch build log ingestion",
+      "quantity": 0.1,
+      "unit": "GB",
+      "usdPerUnit": "0.5000000000",
+      "estimatedUsd": 0.05,
+      "sku": "S8QGXX5R2BKKMDSJ",
+      "rateCode": "S8QGXX5R2BKKMDSJ.JRTCKXETXF.6YS6EN2CT7",
+      "catalogPublicationDate": "2026-10-07T11:55:40Z",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonCloudWatch/current/us-east-1/index.json"
+    },
+    {
+      "description": "CloudWatch log storage GB-month",
+      "quantity": 0.1,
+      "unit": "GB-Mo",
+      "usdPerUnit": "0.0300000000",
+      "estimatedUsd": 0.003,
+      "sku": "6K9ADYQAHV5KX9KZ",
+      "rateCode": "6K9ADYQAHV5KX9KZ.JRTCKXETXF.6YS6EN2CT7",
+      "catalogPublicationDate": "2026-10-07T11:55:40Z",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonCloudWatch/current/us-east-1/index.json"
+    },
+    {
+      "description": "One standard-resolution alarm metric",
+      "quantity": 1,
+      "unit": "alarm-metric-month",
+      "usdPerUnit": "0.10",
+      "estimatedUsd": 0.1,
+      "source": "https://aws.amazon.com/cloudwatch/pricing/"
+    },
+    {
+      "description": "Optional Route 53 public hosted zone",
+      "quantity": 1,
+      "unit": "zone-month",
+      "usdPerUnit": "0.50",
+      "estimatedUsd": 0.5,
+      "source": "https://aws.amazon.com/route53/pricing/"
+    },
+    {
+      "description": "Optional Route 53 standard non-alias queries",
+      "quantity": 100000,
+      "unit": "query",
+      "usdPerUnit": "0.00000040",
+      "estimatedUsd": 0.04,
+      "source": "https://aws.amazon.com/route53/pricing/"
+    }
+  ],
+  "totalUsd": 2.746,
+  "withoutOptionalDnsUsd": 2.206,
+  "mediumBuildAlternativeUsd": 3.246,
+  "mediumBuildSource": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/CodeBuild/current/us-east-1/index.json",
+  "mediumBuildSku": "4ZQKRUHAFVQH8MBM",
+  "mediumBuildUsdPerMinute": "0.0100000000"
+}
