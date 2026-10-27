@@ -1,0 +1,79 @@
+{
+  "locale": "en",
+  "publicationStatus": "draft",
+  "ownerReviewRequired": true,
+  "sourceAsOf": "2026-09-17",
+  "hero": {
+    "name": "Daniel Gaio",
+    "headline": "Software, data and AI, built around practical problems.",
+    "summary": "I’m a computer engineer with experience in software for financial services, automation and applied AI. Here I bring together the things I build, the decisions behind them and what I’m learning along the way.",
+    "workAction": "Explore my work",
+    "writingAction": "Read my writing"
+  },
+  "story": {
+    "heading": "From understanding a problem to building a useful solution",
+    "paragraphs": [
+      "My path connects computer engineering, automation in financial services and computer vision research. Across these experiences, I’ve worked with backend APIs, data integration, production support and technical documentation.",
+      "ProsperSync is where I explore a product of my own: a personal finance application that combines expense capture from images and voice with conversational financial insights.",
+      "This website is my next learning project. I’m building it with TypeScript, Node.js and AWS, with practical exercises in security, reliability, observability and distributed systems. I want to show the decisions, tradeoffs and lessons as the work develops."
+    ]
+  },
+  "work": {
+    "heading": "Selected work",
+    "items": [
+      {
+        "id": "financial-services",
+        "title": "Engineering in financial services",
+        "context": "Sicredi Liberdade",
+        "summary": "Experience with backend APIs, Python automation, data integration, production support and technical documentation.",
+        "detailPrompt": "A specific problem, my contribution and the result will be added after confirming a case that can be shared publicly."
+      },
+      {
+        "id": "prospersync",
+        "title": "ProsperSync",
+        "context": "Personal project",
+        "summary": "A personal finance application with image and voice expense capture and conversational financial insights. The work brings together Next.js, PostgreSQL and OpenAI, with a Python, FastAPI and LangGraph service for financial analysis.",
+        "linkLabel": "Visit ProsperSync",
+        "url": "https://prospersync.com"
+      },
+      {
+        "id": "computer-vision-research",
+        "title": "Computer vision for pasture analysis",
+        "context": "Research scholarship · Unipampa and EMBRAPA · September–December 2020",
+        "summary": "Applied Python and computer vision to UAV imagery for pasture analysis during a research scholarship supported by FAPERGS.",
+        "detailPrompt": "A public research reference or image will be added when its source and permission are confirmed."
+      }
+    ]
+  },
+  "education": {
+    "heading": "Education",
+    "degree": "B.Sc. in Computer Engineering",
+    "institution": "Federal University of Pampa (Unipampa)",
+    "period": "2015–2021"
+  },
+  "learning": {
+    "heading": "Learning by building on AWS",
+    "summary": "This website is an AWS learning project as well as a portfolio. Planned exercises will cover private origins, cache behavior, release recovery and observability, with their costs and cleanup recorded.",
+    "status": "In progress; the new website has not launched on AWS yet."
+  },
+  "writing": {
+    "heading": "Writing",
+    "summary": "Technical notes, experiments and lessons from the things I build.",
+    "migrationNote": "Existing Medium articles will keep their original language. A translation will be linked only when one exists."
+  },
+  "contact": {
+    "heading": "Let’s connect",
+    "links": [
+      {
+        "id": "linkedin",
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/daniel-gaio/"
+      },
+      {
+        "id": "github",
+        "label": "GitHub",
+        "url": "https://github.com/danielgaio"
+      }
+    ]
+  }
+}
