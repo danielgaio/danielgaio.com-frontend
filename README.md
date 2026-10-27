@@ -24,7 +24,7 @@ cp apps/api/.env.example apps/api/.env
 pnpm dev
 ```
 
-Review the API environment example and set a local `JWT_SECRET` before starting it. The web app uses `apps/web/.env.local` for optional `NEXT_PUBLIC_MEASUREMENT_ID`. Environment files stay outside Git and Docker images. Prisma client generation is part of API build/typecheck; no database migration or connection is required merely to compile this scaffold.
+Review the API environment example and set a local `JWT_SECRET` before starting it. The web app uses `apps/web/.env.local` for optional `NEXT_PUBLIC_MEASUREMENT_ID`. Environment files stay outside Git and Docker images. API build, typecheck, development and test commands explicitly generate the Prisma client from its relocated schema; no database migration or connection is required merely to compile this scaffold.
 
 `pnpm dev:web` and `pnpm dev:api` run one app. The web scaffold does not yet consume a functioning publishing API; authentication/posts/projects remain future product work.
 
