@@ -7,7 +7,7 @@
 			"platform": "node",
 			"dockerBuild": {
 				"dockerfile": "${workspaceFolder}/Dockerfile",
-				"context": "${workspaceFolder}",
+				"context": "${workspaceFolder}/../..",
 				"pull": true
 			}
 		},
