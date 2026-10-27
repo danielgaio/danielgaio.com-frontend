@@ -1,0 +1,18 @@
+{
+  "defaultLocale": "en",
+  "rootDestination": "/en/",
+  "locales": [
+    {
+      "locale": "en",
+      "path": "/en/",
+      "label": "English"
+    },
+    {
+      "locale": "pt-BR",
+      "path": "/pt/",
+      "label": "Português"
+    }
+  ],
+  "preserveEquivalentPageOnSwitch": true,
+  "automaticallyTranslateArticles": false
+}

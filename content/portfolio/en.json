@@ -13,8 +13,8 @@
   "story": {
     "heading": "From understanding a problem to building a useful solution",
     "paragraphs": [
-      "My path connects computer engineering, automation in financial services and computer vision research. Across these experiences, I’ve worked with backend APIs, data integration, production support and technical documentation.",
-      "ProsperSync is where I explore a product of my own: a personal finance application that combines expense capture from images and voice with conversational financial insights.",
+      "My path connects computer engineering with software and automation in financial services. Across these experiences, I’ve worked with backend APIs, data integration, production support and technical documentation.",
+      "ProsperSync is where I explore a product of my own: a personal finance application that combines expense capture from images and voice with conversational financial insights. Building it also means connecting AI services to the product and working on shared configuration and delivery automation.",
       "This website is my next learning project. I’m building it with TypeScript, Node.js and AWS, with practical exercises in security, reliability, observability and distributed systems. I want to show the decisions, tradeoffs and lessons as the work develops."
     ]
   },
@@ -30,18 +30,18 @@
       },
       {
         "id": "prospersync",
-        "title": "ProsperSync",
-        "context": "Personal project",
-        "summary": "A personal finance application with image and voice expense capture and conversational financial insights. The work brings together Next.js, PostgreSQL and OpenAI, with a Python, FastAPI and LangGraph service for financial analysis.",
+        "title": "ProsperSync: from an image or voice note to an expense",
+        "context": "Personal project · Product engineering",
+        "summary": "Building the expense-capture experience of a personal finance application, using images and voice as inputs. This work brings together the Next.js application, PostgreSQL and OpenAI.",
         "linkLabel": "Visit ProsperSync",
         "url": "https://prospersync.com"
       },
       {
-        "id": "computer-vision-research",
-        "title": "Computer vision for pasture analysis",
-        "context": "Research scholarship · Unipampa and EMBRAPA · September–December 2020",
-        "summary": "Applied Python and computer vision to UAV imagery for pasture analysis during a research scholarship supported by FAPERGS.",
-        "detailPrompt": "A public research reference or image will be added when its source and permission are confirmed."
+        "id": "prospersync-ai-service",
+        "title": "ProsperSync: connecting AI analysis to the product",
+        "context": "Personal project · Backend integration and delivery",
+        "summary": "Built a financial-analysis service with Python, FastAPI and LangGraph, with shared model configuration and provider integration. Delivery work also includes automation for application-function deployments and database migrations.",
+        "detailPrompt": "Develop a case study around the service boundary, configuration choices and delivery workflow, using shareable examples and observed results."
       }
     ]
   },

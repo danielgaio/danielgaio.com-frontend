@@ -13,8 +13,8 @@
   "story": {
     "heading": "De entender um problema a construir uma solução útil",
     "paragraphs": [
-      "Minha trajetória conecta engenharia de computação, automação em serviços financeiros e pesquisa em visão computacional. Nessas experiências, trabalhei com APIs de backend, integração de dados, suporte à produção e documentação técnica.",
-      "O ProsperSync é o espaço em que exploro um produto próprio: uma aplicação de finanças pessoais que combina o registro de despesas por imagens e voz com análises financeiras por conversa.",
+      "Minha trajetória conecta engenharia de computação com software e automação em serviços financeiros. Nessas experiências, trabalhei com APIs de backend, integração de dados, suporte à produção e documentação técnica.",
+      "O ProsperSync é o espaço em que exploro um produto próprio: uma aplicação de finanças pessoais que combina o registro de despesas por imagens e voz com análises financeiras por conversa. Construí-lo também envolve conectar serviços de IA ao produto e trabalhar na configuração compartilhada e na automação das entregas.",
       "Este site é meu próximo projeto de aprendizado. Estou construindo com TypeScript, Node.js e AWS, com exercícios práticos de segurança, confiabilidade, observabilidade e sistemas distribuídos. Quero mostrar as decisões, as escolhas e os aprendizados conforme o trabalho evolui."
     ]
   },
@@ -30,18 +30,18 @@
       },
       {
         "id": "prospersync",
-        "title": "ProsperSync",
-        "context": "Projeto pessoal",
-        "summary": "Uma aplicação de finanças pessoais com registro de despesas por imagens e voz e análises financeiras por conversa. O trabalho reúne Next.js, PostgreSQL e OpenAI, com um serviço em Python, FastAPI e LangGraph para análise financeira.",
+        "title": "ProsperSync: de uma imagem ou mensagem de voz a uma despesa",
+        "context": "Projeto pessoal · Engenharia de produto",
+        "summary": "Construção da experiência de registro de despesas de uma aplicação de finanças pessoais, usando imagens e voz como entradas. Esse trabalho reúne a aplicação em Next.js, PostgreSQL e OpenAI.",
         "linkLabel": "Visite o ProsperSync",
         "url": "https://prospersync.com"
       },
       {
-        "id": "computer-vision-research",
-        "title": "Visão computacional para análise de pastagens",
-        "context": "Bolsa de pesquisa · Unipampa e EMBRAPA · Setembro–dezembro de 2020",
-        "summary": "Aplicação de Python e visão computacional a imagens de veículos aéreos não tripulados para análise de pastagens, durante uma bolsa de pesquisa com apoio da FAPERGS.",
-        "detailPrompt": "Uma referência pública ou imagem da pesquisa será incluída após a confirmação da fonte e da permissão de uso."
+        "id": "prospersync-ai-service",
+        "title": "ProsperSync: conectando a análise com IA ao produto",
+        "context": "Projeto pessoal · Integração de backend e entrega",
+        "summary": "Desenvolvimento de um serviço de análise financeira com Python, FastAPI e LangGraph, com configuração compartilhada de modelos e integração com provedores. O trabalho de entrega também inclui automação da implantação de funções da aplicação e de migrações do banco de dados.",
+        "detailPrompt": "Desenvolver um estudo de caso sobre a separação do serviço, as decisões de configuração e o fluxo de entrega, usando exemplos que possam ser compartilhados e resultados observados."
       }
     ]
   },
