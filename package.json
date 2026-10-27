@@ -1,0 +1,21 @@
+{
+  "name": "danielgaio-website",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@12.15.0",
+  "engines": {
+    "node": ">=24.22.1 <25",
+    "pnpm": "12.15.0"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter @danielgaio/web --filter @danielgaio/api run dev",
+    "dev:web": "pnpm --filter @danielgaio/web dev",
+    "dev:api": "pnpm --filter @danielgaio/api dev",
+    "build": "pnpm -r --if-present build",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "lint": "pnpm -r --if-present lint",
+    "test": "pnpm --filter @danielgaio/api test --runInBand",
+    "test:e2e": "pnpm --filter @danielgaio/api test:e2e --runInBand",
+    "check": "pnpm typecheck && pnpm lint && pnpm test && pnpm test:e2e && pnpm build"
+  }
+}

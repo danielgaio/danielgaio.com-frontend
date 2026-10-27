@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Website frontend
 
-## Getting Started
+This is the existing Next.js 14 / React 18 frontend, now in the website's pnpm workspace. The visible portfolio/blog pages remain an unfinished scaffold; repository consolidation does not make them a finished product.
 
-First, run the development server:
+Run these commands from the repository root:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```sh
+pnpm dev:web
+pnpm --filter @danielgaio/web typecheck
+pnpm --filter @danielgaio/web lint
+pnpm --filter @danielgaio/web build
+pnpm --filter @danielgaio/web start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The development server uses port 3000. Keep local environment values in `apps/web/.env.local`; `NEXT_PUBLIC_MEASUREMENT_ID` is optional and enables the existing Google Analytics integration only when set. Public environment values are included at build time and must not contain secrets.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The production build emits a standalone Node.js server and traces dependencies from the monorepo root. Build its independent container from that root, so the workspace manifests and unified lockfile are available:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```sh
+docker build -f apps/web/Dockerfile -t danielgaio-web .
+docker run --rm -p 3000:3000 danielgaio-web
+```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+When Google Analytics is configured, pass its public identifier using `--build-arg NEXT_PUBLIC_MEASUREMENT_ID=...` during the image build. Application hosting and deployment target AWS; infrastructure and production-readiness work are tracked in the GitHub Project.

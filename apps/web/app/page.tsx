@@ -58,13 +58,13 @@ export default function Home() {
           Under Construction 🚧
         </h1>
         <p className="text-lg sm:text-xl mb-4 sm:mb-6">
-          Hello! I'm Daniel Gaio, a Computer Engineer graduated from the Federal
+          Hello! I&apos;m Daniel Gaio, a Computer Engineer graduated from the Federal
           University of Pampa (Unipampa). This personal website is currently
-          under construction. I'm rebuilding it using Next.js for the frontend
+          under construction. I&apos;m rebuilding it using Next.js for the frontend
           and Nest.js for the backend, all hosted on AWS.
         </p>
         <p className="text-lg sm:text-xl mb-6 sm:mb-8">
-          If you'd like to connect, feel free to reach out on LinkedIn:
+          If you&apos;d like to connect, feel free to reach out on LinkedIn:
         </p>
         <a
           href="https://www.linkedin.com/in/daniel-gaio/"
