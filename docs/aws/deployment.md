@@ -72,7 +72,7 @@ For subsequent releases, use a new lowercase release identifier, such as `git-<c
 - Direct S3 object access is denied while CloudFront succeeds, and HTTPS/security headers and cache behavior are observable.
 - No editorial intake prompts, private résumé data, unverified current-role labels or invented metrics are public.
 
-Known legacy redirects are exact paths, normalized only for URI encoding and a trailing slash. Conflicting mappings or a viewer-function body over 10 KB fail synthesis rather than silently dropping paths. Unknown old-looking paths do not redirect to Medium: the native Medium URL may redirect back to the custom domain, creating a loop. Resolve archive completeness or verify an independent fallback before production cutover.
+Known legacy redirects are exact paths, normalized only for URI encoding and a trailing slash. The existing Medium subscription paths `/feed` and `/feed/` permanently redirect to the static `/feed.xml`; the feed retains original Medium item identifiers while linking to the new local articles and images. Verify its XML, response type and redirects through CloudFront before cutover. Conflicting mappings or a viewer-function body over 10 KB fail synthesis rather than silently dropping paths. Unknown old-looking paths do not redirect to Medium: the native Medium URL may redirect back to the custom domain, creating a loop. Resolve archive completeness or verify an independent fallback before production cutover.
 
 ## 4. Domain routing and recovery
 

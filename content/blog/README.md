@@ -32,6 +32,14 @@ Dates retain both the exact source timestamp (`publishedAt`) and original public
 
 Only two explicit author-provided English/Portuguese article pairs are marked as translations. Other articles keep their original language and do not receive synthetic translations.
 
+## Feed subscriptions
+
+The static `/feed.xml` contains the twenty observed public articles with their source publication timestamps, original prose and language, and absolute links to the new article/image URLs. CloudFront permanently redirects the existing Medium `/feed` and `/feed/` subscription paths to that file. Its article URL map remains unchanged.
+
+The newest ten item identifiers exactly match the archived RSS: `https://medium.com/p/<post-id>` with `isPermaLink="false"`. Identifiers for the older ten use the same source-consistent pattern and their captured Medium post IDs; those older GUID strings were inferred rather than directly observed in an older feed. They identify items rather than sending readers back to Medium. The separate item links point to the new canonical articles. This preserves the observed subscriber identities under the [RSS GUID semantics](https://www.rssboard.org/rss-specification#ltguidgtSubelementOfLtitemgt); reader-specific duplicate detection still needs real-client observation after cutover.
+
+RSS content is generated at build time, with XML escaping and absolute local image/anchor URLs. It adds no application runtime. The route handler declares an RSS content type, while static serving/upload tools may infer `application/xml` from the exported filename; verify the actual XML response type and both redirects at the AWS endpoint before cutover.
+
 ## Launch and follow-up
 
 Verify each old path redirects once to the new local article; verify every article and image over the AWS endpoint, including percent-encoded Portuguese slugs, math diagrams and code. Image files under `/blog-imports/` need retention across releases so cached older article pages remain readable.

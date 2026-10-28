@@ -20,7 +20,7 @@ export const labels = {
     emptyWriting: "My writing lives on Medium while I bring the archive here.", mediumAction: "Read on Medium", backWriting: "Back to writing",
     posted: "Published", noTranslation: "This article is available in its original language. The language switch opens the writing index.",
     notFound: "That page isn’t here.", notFoundText: "The address may have changed. You can find my work and writing from the homepage.", returnHome: "Return home",
-    articleLanguage: "Article language", moreWriting: "More from the notebook",
+    articleLanguage: "Article language", moreWriting: "More from the notebook", rssLink: "Subscribe via RSS",
   },
   pt: {
     work: "Trabalhos", about: "Minha trajetória", writing: "Artigos", contact: "Vamos conversar",
@@ -41,6 +41,6 @@ export const labels = {
     emptyWriting: "Meus artigos estão no Medium enquanto trago o acervo para cá.", mediumAction: "Ler no Medium", backWriting: "Voltar aos artigos",
     posted: "Publicado em", noTranslation: "Este artigo está disponível no idioma original. A troca de idioma abre o índice de artigos.",
     notFound: "Esta página não está aqui.", notFoundText: "O endereço pode ter mudado. Você encontra meus trabalhos e artigos na página inicial.", returnHome: "Voltar ao início",
-    articleLanguage: "Idioma do artigo", moreWriting: "Mais do caderno",
+    articleLanguage: "Idioma do artigo", moreWriting: "Mais do caderno", rssLink: "Acompanhar por RSS",
   },
 };

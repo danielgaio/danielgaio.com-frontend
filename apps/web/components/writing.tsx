@@ -12,7 +12,7 @@ export function WritingList({ posts, locale }: { posts: Post[]; locale: Locale }
 
 export function BlogPage({ locale }: { locale: Locale }) {
   const ui=labels[locale];
-  return <SiteShell locale={locale} alternatePath={`/${otherLocale(locale)}/blog/`}><section className="page-intro"><div className="container"><p className="eyebrow">{ui.blogEyebrow}</p><h1>{ui.blogTitle}</h1><p>{ui.blogNote}</p></div></section><section className="section blog-archive"><div className="container"><WritingList locale={locale} posts={getPosts()} /></div></section></SiteShell>;
+  return <SiteShell locale={locale} alternatePath={`/${otherLocale(locale)}/blog/`}><section className="page-intro"><div className="container"><p className="eyebrow">{ui.blogEyebrow}</p><h1>{ui.blogTitle}</h1><p>{ui.blogNote}</p></div></section><section className="section blog-archive"><div className="container"><p className="rss-subscribe"><a className="text-link" href="/feed.xml">{ui.rssLink}<span aria-hidden="true">↗</span></a></p><WritingList locale={locale} posts={getPosts()} /></div></section></SiteShell>;
 }
 
 export function articleMetadata(locale: Locale, slug: string): Metadata {

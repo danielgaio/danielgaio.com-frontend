@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildRssFeed } from "../lib/feed.ts";
 
 const output = resolve(fileURLToPath(new URL("../out/", import.meta.url)));
 const posts = JSON.parse(readFileSync(new URL("../../../content/blog/posts.json", import.meta.url), "utf8"));
@@ -20,6 +21,7 @@ for (const [route, language] of routes) {
   assert.equal((html.match(/<h1(?:\s|>)/gi) ?? []).length, 1, `Expected one main heading: ${route}`);
   const canonical = html.match(/<link\b[^>]*\brel="canonical"[^>]*\bhref="([^"]+)"/i)?.[1];
   assert(canonical?.startsWith("https://danielgaio.com/"), `Missing canonical: ${route}`);
+  assert(/<link\b(?=[^>]*\brel="alternate")(?=[^>]*\btype="application\/rss\+xml")(?=[^>]*\bhref="https:\/\/danielgaio.com\/feed.xml")[^>]*>/i.test(html), `Missing RSS discovery metadata: ${route}`);
   for (const match of html.matchAll(/(?:src|href)="(\/(?:_next\/|blog-imports\/)[^"]+)"/g)) {
     const asset = decodeURIComponent(match[1].split("?")[0]);
     assert(existsSync(join(output, asset)), `Missing asset ${asset} from ${route}`);
@@ -36,10 +38,11 @@ for (const post of posts) {
     assert(existsSync(join(output, decodeURIComponent(match[1]))), `Missing imported article image: ${match[1]}`);
   }
 }
-for (const asset of ["404.html", "robots.txt", "sitemap.xml", "icon.svg"]) assert(existsSync(join(output, asset)), `Missing static artifact: ${asset}`);
+for (const asset of ["404.html", "robots.txt", "sitemap.xml", "icon.svg", "feed.xml"]) assert(existsSync(join(output, asset)), `Missing static artifact: ${asset}`);
+assert.equal(readFileSync(join(output, "feed.xml"), "utf8"), buildRssFeed(posts, "https://danielgaio.com"), "Exported feed differs from the complete, deterministic archive feed");
 for (const route of ["/en/", "/pt/"]) {
   const html = readFileSync(join(output, "." + route, "index.html"), "utf8");
   const visible = html.replace(/<script\b[\s\S]*?<\/script>/gi, "").replace(/<[^>]+>/g, " ");
   for (const marker of ["detailPrompt", "ownerReviewRequired", "A specific problem, my contribution", "O novo site ainda não foi lançado"]) assert(!visible.includes(marker), `Editorial note rendered on ${route}`);
 }
-console.log(`Verified ${routes.size} exported routes, ${posts.length} articles and ${localAssets.size} local asset references; languages, headings, canonical metadata, calendar dates and translation targets pass.`);
+console.log(`Verified ${routes.size} exported routes, ${posts.length} articles, RSS feed/discovery and ${localAssets.size} local asset references; languages, headings, canonical metadata, calendar dates and translation targets pass.`);
