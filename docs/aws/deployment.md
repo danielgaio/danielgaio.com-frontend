@@ -2,6 +2,8 @@
 
 This guide describes prepared infrastructure and release tooling. A successful synthesis or test is not evidence of deployment. Record the actual stack, distribution, bucket, preview URL and verification in the linked GitHub work item after an operator performs these steps.
 
+The initial deployment and domain cutover were performed on October 28, 2026; see [the launch record](launch-record.md) for observed results and remaining follow-ups. Preserve the current active release and verified account choice when applying this guide to later changes.
+
 ## Architecture and boundary
 
 `infra/` synthesizes a private S3 origin with Block Public Access, SSE-S3 encryption, bucket-owner-enforced ownership, TLS-only access and versioning. A CloudFront OAC signs origin requests and its bucket permission is scoped to the distribution. CloudFront redirects HTTP to HTTPS and `/` permanently to `/en/`; a small viewer function resolves exported directory indexes and known old article paths. Missing origin objects become a `404` response with the exported `404.html`, never a successful SPA fallback. [OAC documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html)
