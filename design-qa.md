@@ -7,7 +7,7 @@ Scope: Daniel's selected third visual study, implemented in the existing bilingu
 ## Evidence and normalization
 
 - Source: [selected study](docs/design/living-systems-reference.webp), 1003 × 1568 image pixels representing the intended 1440-wide desktop composition.
-- Desktop: Chrome at an actually measured 1440 × 900 CSS viewport, full-page capture 1440 × 4129. [Final hero](docs/design/qa-desktop.webp); [combined same-scale hero comparison](docs/design/qa-comparison.webp).
+- Desktop: Chrome at an actually measured 1440 × 900 CSS viewport, full-page capture 1440 × 4245. The final readable overview uses the restored 1206 × 783 viewport. [Final hero](docs/design/qa-desktop.webp); [combined same-scale hero comparison](docs/design/qa-comparison.webp).
 - Mobile: Chrome override was verified through actual `innerWidth=390`, `innerHeight=844` and `scrollWidth=390`. [English homepage](docs/design/qa-mobile.webp), Portuguese homepage inspected at the same viewport, and [article](docs/design/qa-article.webp).
 - Source and rendered captures were placed together at a normalized width of 803 pixels per panel before judging. Focused hero and work-row comparisons were inspected in addition to the full composition; separate file views were not treated as a comparison.
 
