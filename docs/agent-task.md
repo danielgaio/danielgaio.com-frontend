@@ -4,6 +4,8 @@ Use **$personal-website** to develop DanielGaio.com as Daniel Gaio's English/Por
 
 Read the repository's AGENTS.md and docs/project-brief.md, then inspect the live [GitHub Project](https://github.com/users/danielgaio/projects/2), relevant issues and Daniel's comments. Work on the current user request or next actionable issue according to real priorities and dependencies. Preserve Daniel's additions and existing work, link PRs and verification, and keep status current in GitHub rather than a local roadmap.
 
+The primary repository is **public**. Apply the public-surface rule in [AGENTS.md](../AGENTS.md) to every run, including issue/PR comments, CI logs, attachments and generated content. Keep private source documents and account-recovery/billing evidence in local context; publish only intended professional content and safe verification evidence.
+
 Maintain the dedicated Chrome website group and relevant resource tabs. Give Daniel concise explanations of meaningful AWS decisions, what he can practice, observed results, costs and teardown. Use relevant specialist skills without overriding the chosen AWS ecosystem or stack.
 
 The monorepo migration [PR #14](https://github.com/danielgaio/danielgaio.com-frontend/pull/14) merged with its backend ancestry on October 27, 2026. The AWS proposal #16 and bilingual content #17 also merged after Daniel authorized the merges and asked for the website to go live. Continue the current launch under #8–#10. [Workspace/account/budget issue #6](https://github.com/danielgaio/danielgaio.com-frontend/issues/6) remains open for authenticated AWS discovery, existing spend and budget verification. Ask for missing facts or access when necessary; do not request pasted secrets.
