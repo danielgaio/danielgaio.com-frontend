@@ -24,6 +24,20 @@ test('known legacy article paths redirect to local exports before index resoluti
   assert.equal(route('/introdução-012345abcdef/', {}, { '/introdu%C3%A7%C3%A3o-012345abcdef': '/pt/blog/introdução/' }).statusCode, 301);
 });
 
+test('existing Medium feed subscriptions permanently reach the static feed without losing query values', () => {
+  for (const uri of ['/feed', '/feed/']) {
+    const result = route(uri, {
+      source: { value: 'rss%20reader' },
+      tag: { value: 'one', multiValue: [{ value: 'one' }, { value: 'two' }] },
+    });
+    assert.equal(result.statusCode, 301, uri);
+    assert.equal(result.headers?.location.value, '/feed.xml?source=rss%20reader&tag=one&tag=two', uri);
+  }
+  assert.equal(route('/feed.xml').uri, '/feed.xml');
+  assert.equal(route('/feed.xml').statusCode, undefined);
+  assert.equal(route('/feed-unknown').statusCode, undefined);
+});
+
 test('directory and extensionless routes resolve to their own index; assets remain intact', () => {
   assert.equal(route('/en/').uri, '/en/index.html');
   assert.equal(route('/pt/blog/an-article/').uri, '/pt/blog/an-article/index.html');

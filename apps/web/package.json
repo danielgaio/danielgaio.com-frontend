@@ -2,12 +2,14 @@
   "name": "@danielgaio/web",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --port 3000",
     "build": "next build && node scripts/verify-export.mjs",
     "start": "node scripts/serve-static.mjs",
     "lint": "eslint .",
     "typecheck": "next typegen && tsc --noEmit",
+    "test": "node --test scripts/feed.test.mjs",
     "verify:export": "node scripts/verify-export.mjs"
   },
   "dependencies": {

@@ -39,7 +39,7 @@ pnpm test:e2e
 pnpm build
 ```
 
-`pnpm check` runs these together. Lint commands do not rewrite files. API tests and the module HTTP smoke test run without a database. `pnpm test` also runs the infrastructure routing, stack and release-safety tests. The web build checks exported routes, languages, headings, metadata, dates, translations and local assets; inspect representative desktop/mobile flows in the browser too. Review the legacy API's dependency posture before deploying it.
+`pnpm check` runs these together. Lint commands do not rewrite files. API tests and the module HTTP smoke test run without a database. `pnpm test` also runs the infrastructure routing/stack/release-safety tests and web feed tests. The web build checks exported routes, languages, headings, metadata, dates, translations and local assets; inspect representative desktop/mobile flows in the browser too. Review the legacy API's dependency posture before deploying it.
 
 ## Container builds
 

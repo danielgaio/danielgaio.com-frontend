@@ -40,6 +40,7 @@ function handler(event) {
   if (lookupUri.length > 1 && lookupUri.endsWith('/')) lookupUri = lookupUri.slice(0, -1);
   var target = redirects[lookupUri];
   if (!target && uri === '/') target = '/en/';
+  if (!target && lookupUri === '/feed') target = '/feed.xml';
   if (target) {
     var pairs = [];
     var query = request.querystring || {};
