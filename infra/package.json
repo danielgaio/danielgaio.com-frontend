@@ -8,7 +8,8 @@
     "typecheck": "tsc --noEmit",
     "test": "tsx --test test/*.test.ts",
     "synth": "tsx bin/app.ts",
-    "release": "tsx scripts/website-release.ts"
+    "release": "tsx scripts/website-release.ts",
+    "learn:origin-cache": "tsx scripts/verify-origin-cache.ts"
   },
   "dependencies": {
     "aws-cdk-lib": "2.275.0",
