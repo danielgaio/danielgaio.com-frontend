@@ -14,7 +14,7 @@
     "build": "pnpm -r --if-present build",
     "typecheck": "pnpm -r --if-present typecheck",
     "lint": "pnpm -r --if-present lint",
-    "test": "pnpm --filter @danielgaio/api test --runInBand",
+    "test": "pnpm --filter @danielgaio/api test --runInBand && pnpm --filter @danielgaio/infra test",
     "test:e2e": "pnpm --filter @danielgaio/api test:e2e --runInBand",
     "check": "pnpm typecheck && pnpm lint && pnpm test && pnpm test:e2e && pnpm build"
   }

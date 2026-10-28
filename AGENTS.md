@@ -9,10 +9,10 @@ Use `$personal-website` when available. Read [project context](docs/project-brie
 ## Repository and verification
 
 - Use TypeScript for application code and Node.js 24.22.1 for backend/tooling. pnpm 12.15.0 and the root `pnpm-lock.yaml` manage both apps; do not create app-level lockfiles.
-- `apps/web` is the Next.js scaffold; `apps/api` is the NestJS scaffold. Their independent build/deployment boundaries can remain within this single repository. Share actual public contracts through `packages/contracts` when needed, not backend database internals.
+- `apps/web` is the statically exported Next.js portfolio/blog; `apps/api` retains the NestJS scaffold and is not part of the initial static deployment. `infra` contains the TypeScript CDK stack and release tooling. Keep independent deployment boundaries and share actual public contracts through `packages/contracts` when needed, not backend database internals.
 - Read current scripts and inspect the working tree before edits. Preserve unfinished work. Root commands are `pnpm typecheck`, `pnpm lint`, `pnpm test`, `pnpm test:e2e`, and `pnpm build`; run meaningful checks for the actual change. Inspect affected user flows in the browser. Do not claim runtime/deployment verification from source inspection.
 - Both Dockerfiles take the repository root as build context. Keep real environment files out of Git and images and supply production secrets at runtime. API uses port 3001 by default so it can run alongside the web app on 3000.
-- The original applications are unfinished. Avoid inventing professional claims or interpreting the scaffold as a completed publishing/authentication system. Review old framework dependencies before production release.
+- The API remains unfinished. Avoid inventing professional claims or interpreting its scaffold as a completed publishing/authentication system. Review old framework dependencies before deploying it. The web build verifies the exported article routes, languages, metadata and local image files.
 - The migration PR must preserve its backend ancestry using a merge commit; see [the history decision](docs/architecture/0001-monorepo.md). Do not squash/rebase that migration or remove the original backend repository as incidental cleanup.
 
 ## Product and AWS

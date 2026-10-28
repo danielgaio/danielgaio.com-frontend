@@ -1,0 +1,50 @@
+{
+  "retrievedAt": "2026-10-28T00:27:54.431409+00:00",
+  "publicProfileUrl": "https://danielgaio.com/",
+  "sourceFeedUrl": "https://danielgaio.com/feed",
+  "feedSnapshotSha256": "02932c6dcd7d55b2abcb135181a6b7e79007d83ed4c02605274bf30cc50f7974",
+  "scope": "All 20 articles observed on the public author profile after pagination to the end; not a verified complete account export.",
+  "publicProfilePostCount": 20,
+  "publicProfileEndObserved": true,
+  "publicProfilePaginationEvidence": "Initial listing: 10; paginated listing: 20; repeated End at bottom remained 20; oldest visible article: 4bbf75bdf96d.",
+  "completeAccountInventory": false,
+  "accountExportObtained": false,
+  "sourceBodyCounts": {
+    "public-rss": 10,
+    "public-rendered-article": 10
+  },
+  "importedPostCount": 20,
+  "languageCounts": {
+    "en": 4,
+    "pt": 16
+  },
+  "articleImageCount": 80,
+  "recoveredImageCount": 80,
+  "uniqueAssetFiles": 80,
+  "assetBytes": 17052097,
+  "trackingPixelsRemoved": 10,
+  "mediumPromotionBlocksRemoved": 1,
+  "mediumPromotionImagesRemoved": 1,
+  "missingImages": [],
+  "unrecoveredEmbeddedMedia": [],
+  "legacyRedirectVariantCount": 68,
+  "legacyArticlePathCount": 20,
+  "proseChecksPassed": 20,
+  "linkRepairs": 17,
+  "invalidSourceLinksDisabled": 1,
+  "dateDifferences": [
+    {
+      "postId": "4bbf75bdf96d",
+      "sourceTimestamp": "2025-06-02T10:07:28.996Z",
+      "displayedCalendarDate": "2025-06-01"
+    }
+  ],
+  "unknownLegacyFallbackVerified": false,
+  "mediumProfileSlugRedirectsToCustomDomain": true,
+  "remainingLimitations": [
+    "An authenticated Daniel Gaio account export is still needed to verify unlisted/private/draft posts and original metadata; the visible Medium login belongs to ProsperSync.",
+    "Native Medium author/article URLs were observed redirecting to the custom domain; medium.com/p/<id> is archival metadata, not a verified independent fallback. Keep unknown-path Medium redirects disabled.",
+    "Older public body captures did not expose original tags; no tags were invented.",
+    "Original empty image alt attributes remain empty; author-reviewed accessibility descriptions can be added separately."
+  ]
+}
