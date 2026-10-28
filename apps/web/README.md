@@ -1,8 +1,8 @@
 # Website frontend
 
-This is the existing Next.js 14 / React 18 frontend, now in the website's pnpm workspace. The visible portfolio/blog pages remain an unfinished scaffold; repository consolidation does not make them a finished product.
+The public portfolio and blog use Next.js 16 / React 19 and produce a static export. English is the default, with Portuguese at `/pt/`. `/en/` and `/pt/` provide equivalent homepages and blog indexes. Actual article translations link to each other; untranslated articles retain their original language and offer the other writing index.
 
-Run these commands from the repository root:
+Run from the repository root:
 
 ```sh
 pnpm dev:web
@@ -12,13 +12,17 @@ pnpm --filter @danielgaio/web build
 pnpm --filter @danielgaio/web start
 ```
 
-The development server uses port 3000. Keep local environment values in `apps/web/.env.local`; `NEXT_PUBLIC_MEASUREMENT_ID` is optional and enables the existing Google Analytics integration only when set. Public environment values are included at build time and must not contain secrets.
+`typecheck` generates the version-matched Next.js route types before checking TypeScript, including in a clean checkout.
 
-The production build emits a standalone Node.js server and traces dependencies from the monorepo root. Build its independent container from that root, so the workspace manifests and unified lockfile are available:
+`build` writes deployable files to `apps/web/out/`, with directory-style routes. `start` serves that export for local inspection on port 3000; set `PORT` for another port. No application server, database or secret is needed for the public site. AWS serves the export from private S3 through CloudFront. The CDN resolves directory requests to `index.html` and returns a real 404 for missing pages.
+
+Copy is drawn from `content/portfolio`; editorial intake prompts, draft flags and current-role assumptions are not rendered. Blog text and hashed local images come from `content/blog` and `public/blog-imports`. The import inventory records its completeness; the UI does not claim that the historical archive is complete. Keep imported article paths or tested redirects intact.
+
+The optional `NEXT_PUBLIC_MEASUREMENT_ID` enables the existing analytics component only when configured at build time. This identifier is public and must not contain a secret. Build and inspect the static container from the repository root:
 
 ```sh
 docker build -f apps/web/Dockerfile -t danielgaio-web .
 docker run --rm -p 3000:3000 danielgaio-web
 ```
 
-When Google Analytics is configured, pass its public identifier using `--build-arg NEXT_PUBLIC_MEASUREMENT_ID=...` during the image build. Application hosting and deployment target AWS; infrastructure and production-readiness work are tracked in the GitHub Project.
+No external font or image service is required for the portfolio. The backend workspace is retained for future capabilities and learning; it is not a dependency of this static site.

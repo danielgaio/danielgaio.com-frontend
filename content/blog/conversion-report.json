@@ -1,0 +1,265 @@
+{
+  "articles": [
+    {
+      "postId": "933c4a597fe4",
+      "sourceKind": "public-rss",
+      "prosePreserved": true,
+      "images": 4,
+      "sourceBodySha256": "102811d0996383c0e3007a2386c948530d246cd6077be1c5d815dab246e67ccf",
+      "sanitizedBodySha256": "684ed19b97b75b843751849f8b49f91f28fca062a16292d15ec9e04050032428"
+    },
+    {
+      "postId": "8753ef6d81c8",
+      "sourceKind": "public-rss",
+      "prosePreserved": true,
+      "images": 1,
+      "sourceBodySha256": "b27119ef62b76a257418807a60a2b80241c2280de9f89151f6bbbbcf5d798cf5",
+      "sanitizedBodySha256": "a83163914352d01096b338bcad7f1a67c6e476b7b3c6fa479f7dcb0e867501da"
+    },
+    {
+      "postId": "6875d4b21a59",
+      "sourceKind": "public-rss",
+      "prosePreserved": true,
+      "images": 1,
+      "sourceBodySha256": "84f721abaee89ad00ce51249d919f02c52c526e706c81ff8cb9f3906985824c0",
+      "sanitizedBodySha256": "508e78686b4ed9d1da032f2d41cc2173274030e56b644e386d85a29999a5a9ab"
+    },
+    {
+      "postId": "3c0957793ed2",
+      "sourceKind": "public-rss",
+      "prosePreserved": true,
+      "images": 1,
+      "sourceBodySha256": "10ecbe495f508271ecfe5122c89f4ef30b7943587eb168c7349451d631872d95",
+      "sanitizedBodySha256": "eb9d83ab2b4fd2f11119d4d36a9b321994f34ba181b602de00137ff3ac73ca0d"
+    },
+    {
+      "postId": "22ce6a6db766",
+      "sourceKind": "public-rss",
+      "prosePreserved": true,
+      "images": 6,
+      "sourceBodySha256": "7643f8cb19119a5051de3ba2dc08681a8de6cf51340b94d9cf4847b9569fc603",
+      "sanitizedBodySha256": "10fefd0eeffc0396f0e7b6269563d34519494f77bca4bbc2e392f4fe63f7622c"
+    },
+    {
+      "postId": "aca0b13fa5c4",
+      "sourceKind": "public-rss",
+      "prosePreserved": true,
+      "images": 14,
+      "sourceBodySha256": "dd20f5c3bff054ac134324df2007c89607a7d5a3eaeca0b0c347074d9bf0caef",
+      "sanitizedBodySha256": "59bc0274353b50e821eac885641350608895fd2f392022973ca72af7c0603e42"
+    },
+    {
+      "postId": "b37e974c774a",
+      "sourceKind": "public-rss",
+      "prosePreserved": true,
+      "images": 1,
+      "sourceBodySha256": "0e4248b482043dcd1b86db711d50b550554697424258c0b84942673c3f52f5df",
+      "sanitizedBodySha256": "5409dec7e92616789f442526da583fc9b64772cfff62ebe490c599d5848a761f"
+    },
+    {
+      "postId": "b9deaf64ca24",
+      "sourceKind": "public-rss",
+      "prosePreserved": true,
+      "images": 1,
+      "sourceBodySha256": "ffa5945e899f90e597c47d22f173a305ba8b29ddbcdf1f9962666f1efbdcc447",
+      "sanitizedBodySha256": "7b0e39124901c543f9bafa576f90bc697384bac09741934c8b14cb78d3e22496"
+    },
+    {
+      "postId": "221b12ac5750",
+      "sourceKind": "public-rss",
+      "prosePreserved": true,
+      "images": 1,
+      "sourceBodySha256": "b74ff342bd0b33444c5f73157c9ee6406aa2f5a48559e504f6d027356691c962",
+      "sanitizedBodySha256": "db0e15ee3a9359f1550e14b5b770ea09ce66e37ecdae4f5fb361e1295f88c06b"
+    },
+    {
+      "postId": "fcb3b99be823",
+      "sourceKind": "public-rss",
+      "prosePreserved": true,
+      "images": 2,
+      "sourceBodySha256": "da5e4ee3a01617ebd8b8d7723094a03381df732f1b656937ee8ef2dfa5449c12",
+      "sanitizedBodySha256": "4df6723e7cb5ee400059c7dadf3a3ca12bbe4975b51294893eb57b522193e53a"
+    },
+    {
+      "postId": "0e748093f980",
+      "sourceKind": "public-rendered-article",
+      "prosePreserved": true,
+      "images": 13,
+      "sourceBodySha256": "f6dc7969e2293776fbdee3d6c9516931ae7ba186930cbea113349eed0f414048",
+      "sanitizedBodySha256": "39298942e7096bcc09926750d44678d72dabc77225f5c178c407a0ee0500b322"
+    },
+    {
+      "postId": "4bbf75bdf96d",
+      "sourceKind": "public-rendered-article",
+      "prosePreserved": true,
+      "images": 6,
+      "sourceBodySha256": "36e63eb0a24ef2612a7a4e1d1b943682080dd98d8eadc1714f7f3aa3875c08d7",
+      "sanitizedBodySha256": "f556d4ce210a5d32249fd30c21d81d992209c2ca3a27c15247d8a7e98bdd7270"
+    },
+    {
+      "postId": "570a2b44c840",
+      "sourceKind": "public-rendered-article",
+      "prosePreserved": true,
+      "images": 1,
+      "sourceBodySha256": "5a274bd60539a3be206178b55c670181d863e2c2a9071878fe4658ab692f7c0a",
+      "sanitizedBodySha256": "dbe5659a666e704d3bebfcba28a9046c92aa4ae0ab458ac723d556594c98e8d3"
+    },
+    {
+      "postId": "69fa0f570d3c",
+      "sourceKind": "public-rendered-article",
+      "prosePreserved": true,
+      "images": 3,
+      "sourceBodySha256": "ddf514fbf945a201d2b9baad05e23fd639af36e3e851aca771df4c5b6ceb02cf",
+      "sanitizedBodySha256": "7fc145254f58e089bc3d6b16eca4bd93d44dfe91ad4f2b9275dfc1d02a5159a8"
+    },
+    {
+      "postId": "7121617c7759",
+      "sourceKind": "public-rendered-article",
+      "prosePreserved": true,
+      "images": 1,
+      "sourceBodySha256": "626df36f5ee81cdad730ad0411d9ea240dd321f1e4eb544ac8b6c265efc54f20",
+      "sanitizedBodySha256": "85c2a5a4db7339644942467844cad3693eb7d1bc9f08c082e7a010c0d19a52b1"
+    },
+    {
+      "postId": "a58eff243478",
+      "sourceKind": "public-rendered-article",
+      "prosePreserved": true,
+      "images": 8,
+      "sourceBodySha256": "722550c27b42a79451adc2a0a2282852824efb494ede404de5bdd9512e70e1eb",
+      "sanitizedBodySha256": "e64e134feaabc7d04a4110ba2de92ec5b0ef7327de040555a90fce347e84c0a9"
+    },
+    {
+      "postId": "b4e7b37befc0",
+      "sourceKind": "public-rendered-article",
+      "prosePreserved": true,
+      "images": 7,
+      "sourceBodySha256": "dfc90dab24c627cea7b7eaf5335683a9560b2d53184759aa1983ac58f19faa1f",
+      "sanitizedBodySha256": "789cb4eaa734fd2e7f1edcebe53b5950c39442a52bfb63fe72b8eac8adc8b4a8"
+    },
+    {
+      "postId": "c1f84beb094a",
+      "sourceKind": "public-rendered-article",
+      "prosePreserved": true,
+      "images": 2,
+      "sourceBodySha256": "8e8dbe617ae43b618666d8bd42090496389b23c2cb19b586e0da8913e2ea96dd",
+      "sanitizedBodySha256": "0b2b86a6abd6fac35896b48142bac5de56abda5d8c686af1ee338fda80ba5c25"
+    },
+    {
+      "postId": "c5eefe0e0cc4",
+      "sourceKind": "public-rendered-article",
+      "prosePreserved": true,
+      "images": 6,
+      "sourceBodySha256": "ae5a446e59a0d2c7001482e123eb230e2c9c4f880faf6a467c5107da7bcd8419",
+      "sanitizedBodySha256": "23b546ab53264ce7ea668ac5acf9eb27b0ab747030a17b62fb929d9c455d6bb4"
+    },
+    {
+      "postId": "f831c9eae1ff",
+      "sourceKind": "public-rendered-article",
+      "prosePreserved": true,
+      "images": 1,
+      "sourceBodySha256": "53e39239346df5b24ba68de77fa7e5a2eaf6c3ee15f6f5764d4398cdcce6f107",
+      "sanitizedBodySha256": "95dcd9334fe22b6e0a89b6a6b68092b5b50820a03327bfced914a015ca259bfd"
+    }
+  ],
+  "linkRepairs": [
+    {
+      "postId": "6875d4b21a59",
+      "originalHref": "http://localhost:11434](http://localhost:11434).",
+      "href": "http://localhost:11434"
+    },
+    {
+      "postId": "22ce6a6db766",
+      "originalHref": "https://www.investidor.gov.br/menu/Menu_Investidor/derivativos/mercado_opcoes.html](https://www.investidor.gov.br/menu/Menu_Investidor/derivativos/mercado_opcoes.html).",
+      "href": "https://www.investidor.gov.br/menu/Menu_Investidor/derivativos/mercado_opcoes.html"
+    },
+    {
+      "postId": "22ce6a6db766",
+      "originalHref": "https://www.clear.com.br/site/pubfiles/ebook/eBook-Opcoes-Clear.pdf](https://www.clear.com.br/site/pubfiles/ebook/eBook-Opcoes-Clear.pdf).",
+      "href": "https://www.clear.com.br/site/pubfiles/ebook/eBook-Opcoes-Clear.pdf"
+    },
+    {
+      "postId": "22ce6a6db766",
+      "originalHref": "https://br.advfn.com/investimentos/opcoes/opcao-de-venda](https://br.advfn.com/investimentos/opcoes/opcao-de-venda).",
+      "href": "https://br.advfn.com/investimentos/opcoes/opcao-de-venda"
+    },
+    {
+      "postId": "22ce6a6db766",
+      "originalHref": "https://br.advfn.com/investimentos/opcoes/opcao-de-compra](https://br.advfn.com/investimentos/opcoes/opcao-de-compra).",
+      "href": "https://br.advfn.com/investimentos/opcoes/opcao-de-compra"
+    },
+    {
+      "postId": "22ce6a6db766",
+      "originalHref": "https://br.advfn.com/investimentos/opcoes/codigo-bovespa](https://br.advfn.com/investimentos/opcoes/codigo-bovespa).",
+      "href": "https://br.advfn.com/investimentos/opcoes/codigo-bovespa"
+    },
+    {
+      "postId": "22ce6a6db766",
+      "originalHref": "https://youtu.be/dRLesPcTE54](https://youtu.be/dRLesPcTE54).",
+      "href": "https://youtu.be/dRLesPcTE54"
+    },
+    {
+      "postId": "22ce6a6db766",
+      "originalHref": "https://institucional.xpi.com.br/investimentos/produtos-estruturados/Compra%20e%20Venda%20de%20Call%20e%20Put.pdf](https://institucional.xpi.com.br/investimentos/produtos-estruturados/Compra%20e%20Venda%20de%20Call%20e%20Put.pdf).",
+      "href": "https://institucional.xpi.com.br/investimentos/produtos-estruturados/Compra%20e%20Venda%20de%20Call%20e%20Put.pdf"
+    },
+    {
+      "postId": "22ce6a6db766",
+      "originalHref": "https://blog.luizfernandoroxo.com.br/volatilidade-implicita/](https://blog.luizfernandoroxo.com.br/volatilidade-implicita/).",
+      "href": "https://blog.luizfernandoroxo.com.br/volatilidade-implicita/"
+    },
+    {
+      "postId": "fcb3b99be823",
+      "originalHref": "https://www.investopedia.com/terms/d/dividendyield.asp](https://www.investopedia.com/terms/d/dividendyield.asp).",
+      "href": "https://www.investopedia.com/terms/d/dividendyield.asp"
+    },
+    {
+      "postId": "f831c9eae1ff",
+      "originalHref": "http://papers.nips.cc/paper/8935-first-order-motion-model-for-image-animation](http://papers.nips.cc/paper/8935-first-order-motion-model-for-image-animation)",
+      "href": "http://papers.nips.cc/paper/8935-first-order-motion-model-for-image-animation"
+    },
+    {
+      "postId": "f831c9eae1ff",
+      "originalHref": "https://github.com/AliaksandrSiarohin/first-order-model](https://github.com/AliaksandrSiarohin/first-order-model)",
+      "href": "https://github.com/AliaksandrSiarohin/first-order-model"
+    },
+    {
+      "postId": "f831c9eae1ff",
+      "originalHref": "https://colab.research.google.com/github/AliaksandrSiarohin/first-order-model/blob/master/demo.ipynb](https://colab.research.google.com/github/AliaksandrSiarohin/first-order-model/blob/master/demo.ipynb)",
+      "href": "https://colab.research.google.com/github/AliaksandrSiarohin/first-order-model/blob/master/demo.ipynb"
+    },
+    {
+      "postId": "f831c9eae1ff",
+      "originalHref": "https://olhardigital.com.br/noticia/software-aberto-cria-deepfakes-em-tempo-real-durante-reunioes-no-zoom/99619](https://olharddigital.com.br/noticia/software-aberto-cria-deepfakes-em-tempo-real-durante-reunioes-no-zoom/99619)",
+      "href": null,
+      "reason": "ambiguous malformed Markdown URL; visible link text preserved"
+    },
+    {
+      "postId": "f831c9eae1ff",
+      "originalHref": "https://www.vice.com/en_us/article/g5xagy/this-open-source-program-deepfakes-you-during-zoom-meetings-in-real-time](https://www.vice.com/en_us/article/g5xagy/this-open-source-program-deepfakes-you-during-zoom-meetings-in-real-time)",
+      "href": "https://www.vice.com/en_us/article/g5xagy/this-open-source-program-deepfakes-you-during-zoom-meetings-in-real-time"
+    },
+    {
+      "postId": "f831c9eae1ff",
+      "originalHref": "https://github.com/alievk/avatarify](https://github.com/alievk/avatarify)",
+      "href": "https://github.com/alievk/avatarify"
+    },
+    {
+      "postId": "f831c9eae1ff",
+      "originalHref": "https://drive.google.com/file/d/1coUCdyRXDbpWnEkA99NLNY60mb9dQ_n3/view?usp=sharing](https://drive.google.com/file/d/1coUCdyRXDbpWnEkA99NLNY60mb9dQ_n3/view?usp=sharing)",
+      "href": "https://drive.google.com/file/d/1coUCdyRXDbpWnEkA99NLNY60mb9dQ_n3/view?usp=sharing"
+    },
+    {
+      "postId": "f831c9eae1ff",
+      "originalHref": "https://docs.conda.io/en/latest/miniconda.html#linux-installers](https://docs.conda.io/en/latest/miniconda.html#linux-installers)",
+      "href": "https://docs.conda.io/en/latest/miniconda.html#linux-installers"
+    }
+  ],
+  "dateDifferences": [
+    {
+      "postId": "4bbf75bdf96d",
+      "sourceTimestamp": "2025-06-02T10:07:28.996Z",
+      "displayedCalendarDate": "2025-06-01"
+    }
+  ],
+  "embeds": []
+}

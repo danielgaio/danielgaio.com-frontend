@@ -12,7 +12,7 @@ Practical AWS experience is an equally valid outcome. Learning can justify compl
 
 ## Stack and repository
 
-TypeScript and Node.js are confirmed. Daniel accepted a pnpm monorepo using this existing repository as its base, retaining existing GitHub planning links and both code histories. The current Next.js/NestJS scaffolds are in `apps/web` and `apps/api`; the final product and AWS service architecture remain to be developed. `packages/contracts` is the shared public-contract boundary and `infra` is the future AWS TypeScript infrastructure boundary; neither needs invented sample code.
+TypeScript and Node.js are confirmed. Daniel accepted a pnpm monorepo using this existing repository as its base, retaining existing GitHub planning links and both code histories. PR #14 merged with a merge commit on October 27, 2026. `apps/web` now builds the English/Portuguese static portfolio and migrated public blog. `apps/api` retains the unfinished NestJS application and does not need a paid runtime for this launch. `packages/contracts` is the shared public-contract boundary; `infra` defines private S3/CloudFront hosting and recoverable releases. See [the deployment guide](aws/deployment.md). Daniel authorized reviewed merges and the current launch in chat; authenticated AWS inventory and actual deployment must still be verified.
 
 ## AWS and costs
 
@@ -26,7 +26,7 @@ Daniel has an AWS account and wants website account/cost separation where practi
 
 DanielGaio.com currently serves Daniel's Medium profile. The initial DNS lookup returned `dns3.hostgator.com.br` and `dns4.hostgator.com.br`; verify registrar ownership, the actual DNS zone and mail/subdomain dependencies through authorized access. Daniel recalls buying the domain through HostGator.
 
-Archive the complete Medium source export and inventory articles, dates, languages, metadata, images/embeds and existing paths, including encoded Portuguese slugs. Migrate required assets to AWS, reconcile article/assets counts, and preserve paths or test permanent redirects for the domain Daniel controls. Decide canonical handling for Medium copies. Validate the AWS preview before cutover and preserve unrelated DNS with a recoverable routing plan.
+The observed public profile archive contains 20 articles (4 English, 16 Portuguese), recovered from the public RSS and rendered article bodies, with 80 local images and 68 encoded/decoded/slash legacy URL variants. [The archive inventory](../content/blog/inventory.json) and captured sources record provenance and limitations. This is not a verified account ZIP export: private/unlisted/draft content and membership dates still require the correct Daniel Gaio Medium account. The visible Medium session belonged to ProsperSync. Do not use it for Daniel's export or cancellation. Native Medium links redirect to the custom domain, so unknown paths must not fall back to Medium and loop. Validate the AWS preview and known old paths before cutover; preserve unrelated DNS with a recoverable routing plan.
 
 End the annual Medium subscription with renewal and paid-through dates in view. Disabling renewal before launch can be appropriate if access lasts long enough. No content deletion, membership cancellation or DNS change is part of repository consolidation.
 
