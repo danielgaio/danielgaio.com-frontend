@@ -52,4 +52,6 @@ Current official catalog rates still match [the cost scenario](cost-scenario.jso
 
 Content releases and object versions are retained. See [deployment and recovery](deployment.md) for a later release/activation using the verified account guard. An actual content rollback exercise has not been performed on this first release.
 
+The first user-operable learning slice is [private origin and CDN caching](learning-origin-cache.md). It uses read-only checks against existing resources; the preview hostname shares production and must not be used as isolated staging for a deliberate visible change.
+
 A private DNS rollback batch restores the original apex/www A destinations and deletes both new AAAA aliases, leaving mail/FTP and certificate validation intact. This Route 53 record rollback is the available primary recovery path. A nameserver reversal requires restoring and verifying the old authoritative zone first, and delegation caches can outlive record changes. Retain the private original-record backup and Medium membership while migration and recovery follow-ups remain open. Daniel closed his manual backend-retirement task #15; the agent did not delete that repository. Preserve the backend history imported into the monorepo.
