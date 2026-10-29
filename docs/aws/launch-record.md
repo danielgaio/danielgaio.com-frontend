@@ -1,13 +1,29 @@
-# AWS launch record — October 28, 2026
+# AWS launch and release record
 
 The portfolio and observed public blog archive are deployed to AWS. Production serves [DanielGaio.com](https://danielgaio.com/en/) and [www](https://www.danielgaio.com/en/), with English as the default and Portuguese switching. The independent AWS endpoint is [the CloudFront preview](https://d2tj44rrzcwnln.cloudfront.net/en/).
+
+## Current release — Curiosity in Motion, October 29, 2026
+
+Daniel approved publication of the selected anime redesign. [PR #24](https://github.com/danielgaio/danielgaio.com-frontend/pull/24) was technically reviewed at `d853d68e9e07f2f49aba7947005889d62e7a9b66` and merged as `01f84449ad2e42981fd4ee75f3f829d67197ec16`, with the same source tree. Technical APPROVE is a commit-anchored COMMENT review because the connected account is the author; it is not formal GitHub approval.
+
+The existing AWS release helper published **`git-d853d68`**, replacing **`initial`**. CloudFormation is `UPDATE_COMPLETE`; the distribution-deployed and invalidation-completed waiters passed. The current content origin is `/releases/git-d853d68`. This is a content release on existing infrastructure, with no new hosting service, IAM access or DNS change. The previously verified export was reused without another build. A clean staging copy excluded generated conflict-name duplicates; 277 intended files (22,990,537 bytes) were hashed before upload.
+
+An independent normal-DNS/TLS audit completed at **13:55 UTC** with **zero failures in 678 route checks**, 226 each on apex, www and CloudFront. Each host passed all 20 article bodies, 68 legacy aliases, 80 imported image hashes, 13 current Next assets, nine anime WebPs, bilingual pages, RSS, query behavior and true 404s. MIME/security/cache policies, six cache probe groups and three HTTP-to-HTTPS redirects passed. Direct unauthenticated access to the new S3 release returned 403. [Sanitized verification record](anime-release-verification.json).
+
+Live Chrome checks on www passed English/Portuguese switching, 1440×900 desktop and 390×844 mobile layouts without horizontal page overflow, mobile navigation/Escape, moving foliage, manual pause/resume, loaded images and empty error logs. The viewport override was reset. The implementation’s OS reduced-motion and hidden-tab handling remain source-reviewed limits; no additional runtime emulation is claimed. See [design QA](../../design-qa.md) for the earlier source and local visual checks.
+
+The existing account-wide US$10 monthly budget, actual 85%/100% and forecast 100% alerts and email subscribers were reverified; reported month-to-date spend was within the target, subject to billing delay. Billing now exposes the **Project** cost-allocation tag: activation returned no errors and a separate read confirmed **Active**. This does not yet prove attributed usage; #6 remains open for a later billing-data check. No private bill amounts or subscribers are published.
+
+Recovery uses the retained `initial` release through the account-guarded `release activate` command in [the deployment guide](deployment.md). Both releases and shared assets were retained. No live rollback exercise was performed and no DNS change is needed for a content rollback. Independent learning PR #23 remains separate.
+
+## Initial launch — October 28, 2026
 
 Delivery: [preview #8](https://github.com/danielgaio/danielgaio.com-frontend/issues/8), [domain launch #10](https://github.com/danielgaio/danielgaio.com-frontend/issues/10), and [account/budget #6](https://github.com/danielgaio/danielgaio.com-frontend/issues/6). The release reuses the verified export whose application sources match main at `3cbe6afd05fa183c9db1ec1c3d3a8a97c4991139`; its release ID is `initial`. Subsequent documentation commits do not rebuild or change that export.
 
 ## Deployed resources and access
 
 - CloudFormation stack `DanielGaioWebsite`, origin region `us-east-1`, creates the private versioned S3 bucket, CloudFront distribution, two origin access controls, cache policy and routing function. Stack outputs identify the content bucket, distribution, active release and preview endpoint.
-- CloudFront uses pay-as-you-go pricing. The content origin is `/releases/initial`; shared hashed assets remain outside the release prefix. The API scaffold is not deployed. No server, database, CDK bootstrap resources or new IAM deployment role were created.
+- CloudFront uses pay-as-you-go pricing. At initial launch the content origin was `/releases/initial`; shared hashed assets remain outside the release prefix. The API scaffold is not deployed. No server, database, CDK bootstrap resources or new IAM deployment role were created.
 - A non-exportable ACM certificate in `us-east-1` is issued for both apex and www. Both hosts serve the site; canonical metadata uses the apex. HTTP redirects to HTTPS and `/` redirects to `/en/`.
 - After considering a separate member account, Daniel explicitly selected the existing account for this launch. No new AWS account was created. Resources use `Project=DanielGaioWebsite` and `Environment=production` tags. This is resource attribution, not account isolation.
 - Deployment used the existing operator identity through AWS CLI console sign-in and temporary credentials. Credentials, private account/billing evidence and authentication links remain outside the repository.
@@ -42,13 +58,13 @@ Independent live HTTPS probes against CloudFront verified:
 
 Before delegation, strict TLS probes preserving the production Host/SNI verified apex and www for both languages, feed, a Portuguese legacy URL, root redirect and missing-page 404. The certificate covers both hostnames. Browser checks verified the deployed portfolio, Portuguese switching and the www production page. Existing mobile layout verification preceded deployment; the browser viewport override did not affect the target tab, so no new mobile-browser pass is claimed for this launch.
 
-The independent public-domain audit completed at 12:46 UTC using normal DNS and certificate validation, with zero failures across 197 paths: all 20 article bodies, 68 legacy redirects, 80 image hashes and nine Next.js assets passed, along with feed, robots/sitemap, both languages, queries and 404 checks. Both apex and www served matching portfolio bodies. The system resolver, Cloudflare and Google returned Route 53/CloudFront routing. The observed archive contains 20 public posts, not a claimed complete Medium account export. Private/unlisted/draft inventory and membership dates remain open under #9 and #11.
+The independent public-domain audit completed at 12:46 UTC using normal DNS and certificate validation, with zero failures across 197 paths: all 20 article bodies, 68 legacy redirects, 80 image hashes and nine Next.js assets passed, along with feed, robots/sitemap, both languages, queries and 404 checks. Both apex and www served matching portfolio bodies. The system resolver, Cloudflare and Google returned Route 53/CloudFront routing. The observed archive contains 20 public posts, not a claimed complete Medium account export. The later personal-account reconciliation matched all 20 published IDs. Daniel retained three private drafts and originals on free Medium and waived further ZIP handling; no full account export is claimed. Annual renewal was disabled on the verified personal account, and #9/#11 are complete.
 
 ## Cost and recovery
 
 The existing account-wide US$10 monthly cost budget was verified, with email subscribers for actual-spend alerts at 85% and 100%, plus a 100% forecast alert. It is a delayed alert, not a hard spending cap. Private bill amounts and recipient addresses are not published here.
 
-Current official catalog rates still match [the cost scenario](cost-scenario.json). The implemented S3/CloudFront scenario is approximately US$1.553/month, plus US$0.50 for the public DNS zone, before applicable allowances, tax and existing usage. The broader scenario including small build/log/monitoring exercises and non-alias DNS queries remains US$2.746/month. Those quantities are estimates, not enforced usage limits; build and monitoring resources in that scenario were not provisioned by this launch. The new Project cost-allocation tag is not yet listed by billing and must be activated when AWS exposes it; #6 remains open for that attribution check.
+Current official catalog rates still match [the cost scenario](cost-scenario.json). The implemented S3/CloudFront scenario is approximately US$1.553/month, plus US$0.50 for the public DNS zone, before applicable allowances, tax and existing usage. The broader scenario including small build/log/monitoring exercises and non-alias DNS queries remains US$2.746/month. Those quantities are estimates, not enforced usage limits; build and monitoring resources in that scenario were not provisioned by this launch. At initial launch billing did not yet expose the Project cost-allocation tag. It was activated on October 29; actual attribution remains open under #6.
 
 Content releases and object versions are retained. See [deployment and recovery](deployment.md) for a later release/activation using the verified account guard. An actual content rollback exercise has not been performed on this first release.
 
