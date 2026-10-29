@@ -1,0 +1,69 @@
+{
+  "release": "git-d853d68",
+  "previousRelease": "initial",
+  "reviewedCommit": "d853d68e9e07f2f49aba7947005889d62e7a9b66",
+  "mergedCommit": "01f84449ad2e42981fd4ee75f3f829d67197ec16",
+  "sourceTree": "fd073b7ec6d654cc001ddf29213d8d8337558ba2",
+  "verifiedAtUtc": "2026-10-29T13:55:42.430266+00:00",
+  "endpoints": [
+    "https://danielgaio.com",
+    "https://www.danielgaio.com",
+    "https://d2tj44rrzcwnln.cloudfront.net"
+  ],
+  "verification": {
+    "status": "PASSED_EXACT_EXPORT_HTTP",
+    "failureCount": 0,
+    "checksPerHost": 226,
+    "totalRouteChecks": 678,
+    "categoriesPerHost": {
+      "page": 8,
+      "article": 20,
+      "legacy_alias": 68,
+      "imported_image": 80,
+      "next_asset": 13,
+      "anime_webp": 9,
+      "support_asset": 11,
+      "feed": 1,
+      "metadata": 3,
+      "routing": 6,
+      "query_or_directory": 4,
+      "query_redirect": 1,
+      "missing": 2
+    },
+    "feed": {
+      "items": 20,
+      "uniqueIds": 20,
+      "canonicalImportedImageReferences": 80
+    },
+    "cacheProbeGroupsPassed": 6,
+    "httpToHttpsRedirectsPassed": 3,
+    "privateOriginStatus": 403
+  },
+  "controlPlane": {
+    "stackStatus": "UPDATE_COMPLETE",
+    "activeRelease": "git-d853d68",
+    "distributionDeployedWaiter": "passed",
+    "invalidationCompletedWaiter": "passed"
+  },
+  "browser": {
+    "liveHost": "www.danielgaio.com",
+    "desktopCssViewport": "1440x900",
+    "mobileCssViewport": "390x844",
+    "languages": [
+      "en",
+      "pt-BR"
+    ],
+    "manualPauseResume": "passed",
+    "movingFoliageTransforms": "observed",
+    "mobileMenuEscape": "passed",
+    "horizontalPageOverflow": false,
+    "observedBrokenImages": 0,
+    "errorLogs": [],
+    "viewportOverrideReset": true
+  },
+  "limits": [
+    "OS reduced-motion and hidden-tab handling remain source-reviewed; no new runtime emulation claimed.",
+    "The previous release is retained; no production rollback exercise was performed.",
+    "Billing tags are Active, but actual attributed usage is a later billing-data verification."
+  ]
+}
