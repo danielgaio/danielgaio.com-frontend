@@ -1,0 +1,13 @@
+> Historical study: Daniel selected the subsequent [Curiosity in Motion](curiosity-in-motion.md) direction on October 29, 2026. Its motion behavior and QA supersede this earlier implementation.
+
+# Living Systems visual identity
+
+Daniel selected the third displayed design study on October 28, 2026: the dark composition with an orange path through upright glass planes. This replaces the original cream-and-orbit appearance while keeping the portfolio, personal story, AWS learning and bilingual writing structure.
+
+The visual system uses ink aubergine, warm orange, porcelain text and pale lilac reading surfaces. Manrope handles interface text; Cormorant Garamond adds the italic display voice and long-form reading typography. Both are self-hosted Google Fonts, with their SIL Open Font Licenses in `apps/web/public/media/fonts/`. Original Feather icons are vendored under their MIT license in `public/media/icons/`. There are no new runtime dependencies or external font requests.
+
+The four editorial artworks were independently generated with the built-in ImageGen tool from the selected study. They depict an abstract system, not actual products, architecture evidence or a claimed production deployment. The original PNGs remain outside the repository; five production WebP files (including a smaller mobile hero) total 303,354 bytes. Filenames are versioned to respect the existing immutable `/media/` cache behavior. The selected study is retained as `living-systems-reference.webp`; its illustrative article titles and unsupported ProsperSync AWS tag were not copied into the website. Real portfolio text, technology evidence, article titles and destinations remain in use.
+
+Motion uses short, once-per-element scroll entrances and restrained fine-pointer artwork movement. Text and controls do not move with the pointer. Server-rendered content is visible without animation or JavaScript. The OS reduced-motion preference disables these effects, and an accessible on-page Reduce motion toggle also disables smooth anchor scrolling. There are no continuous animation loops, animation libraries, scroll hijacking, loading gates or new canvas/runtime services. Observers, event listeners, animation frames and active animations clean up on unmount or preference changes.
+
+The site remains a static Next.js export on the existing AWS architecture. This source change does not provision resources, rebuild hourly, alter DNS or change the subscription. Deployment needs the normal reviewed release workflow; the local preview is not the production site.
