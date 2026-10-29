@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { labels, otherLocale, type Locale } from "@/lib/navigation";
 import { Icon } from "./icon";
+import { Signature } from "./signature";
+import { MotionToggle } from "./motion-stage";
 
 export function SiteNav({ locale, alternatePath }: { locale: Locale; alternatePath?: string }) {
   const [open, setOpen] = useState(false);
@@ -24,13 +26,14 @@ export function SiteNav({ locale, alternatePath }: { locale: Locale; alternatePa
     <header className="site-header">
       <div className="header-inner">
         <a className="brand" href={`/${locale}/`} aria-label={`Daniel Gaio — ${ui.home}`}>
-          <span className="brand-name">Daniel Gaio</span>
+          <Signature />
         </a>
         <nav className="desktop-nav" aria-label={locale === "pt" ? "Navegação principal" : "Main navigation"}>
           {links.map(link => <a key={link.href} href={link.href}>{link.label}</a>)}
         </nav>
         <div className="header-actions">
           <div className="language-switch"><span aria-current="true">{locale.toUpperCase()}</span><a href={alternatePath ?? `/${otherLocale(locale)}/`} hrefLang={locale === "en" ? "pt-BR" : "en"} lang={locale === "en" ? "pt-BR" : "en"} aria-label={ui.languageLabel}>{otherLocale(locale).toUpperCase()}</a></div>
+          <MotionToggle locale={locale} />
           <button ref={toggle} className="menu-toggle" type="button" aria-label={open ? ui.close : ui.menu} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(isOpen => !isOpen)}>
             <Icon name={open ? "x" : "menu"} />
           </button>

@@ -1,49 +1,48 @@
-# Living Systems design QA
+# Curiosity in Motion — design QA
 
 final result: passed
 
-Scope: Daniel's selected third visual study, implemented in the existing bilingual static website. This is local implementation verification, not a production deployment claim.
+## Visual truth and captures
 
-## Evidence and normalization
+Source: `docs/design/curiosity-in-motion-reference.webp` (original selected image: 1171 × 1343 pixels). This is Daniel's selected anime study, superseding Living Systems.
 
-- Source: [selected study](docs/design/living-systems-reference.webp), 1003 × 1568 image pixels representing the intended 1440-wide desktop composition.
-- Desktop: Chrome at an actually measured 1440 × 900 CSS viewport, full-page capture 1440 × 4245. The final readable overview uses the restored 1206 × 783 viewport. [Final hero](docs/design/qa-desktop.webp); [combined same-scale hero comparison](docs/design/qa-comparison.webp).
-- Mobile: Chrome override was verified through actual `innerWidth=390`, `innerHeight=844` and `scrollWidth=390`. [English homepage](docs/design/qa-mobile.webp), Portuguese homepage inspected at the same viewport, and [article](docs/design/qa-article.webp).
-- Source and rendered captures were placed together at a normalized width of 803 pixels per panel before judging. Focused hero and work-row comparisons were inspected in addition to the full composition; separate file views were not treated as a comparison.
+Implementation: the existing static Next.js export at local port 3002. Desktop CSS viewport: 1440 × 900; full capture: 1440 × 1928 pixels, `docs/design/curiosity-qa-desktop.webp`. Mobile CSS viewport: 390 × 844; full captures: 390 × 3150 EN and 390 × 3190 PT, `docs/design/curiosity-qa-mobile-en.webp` and `docs/design/curiosity-qa-mobile-pt.webp`. Capture pixels align with CSS dimensions; comparison panels are resized to a common width without stretching. These are page-content captures, without browser chrome.
 
-The full implementation is longer than the concept: Daniel asked to retain the existing structure, so the personal story, education and AWS learning sections remain. Real project descriptions, real article titles and functioning links also require more space than the illustrative study. These are intentional content constraints, not missing visual sections.
+State: homepage, disclosures closed. Motion is deliberately paused for deterministic final visual captures, so entrance animations cannot make text appear faint. The live preview is resumed for handoff. The source is a static image; screenshots do not prove motion.
 
-## Findings and fixes
+Combined full-view input: `docs/design/curiosity-qa-comparison.webp`, each panel normalized to 900px width. Focused hero input: `docs/design/curiosity-qa-hero.webp`, matching the source hero and implemented hero region. Full EN/PT mobile images were compared together in the task workspace. Independent visual review opened these combined inputs and found no P0/P1/P2 issues.
 
-1. P2: initial desktop hero had excess height and a small introductory line not present in the selected hierarchy. Removed the visual introductory line and revised desktop/tablet dimensions. Recaptured and compared: the text/artwork balance, three-line headline and beginning of work now follow the selected composition.
-2. P2: the first work implementation used the same sans heading treatment for every row and undersized supporting copy. Added the source's serif treatment to the two ProsperSync headings, increased copy/numeral scale and refined the first artwork crop. Post-fix combined work comparison passed independent visual review.
-3. P2: independent code review found that the in-page Reduce motion toggle did not disable smooth anchor scrolling. Added `html:has(.motion-paused){scroll-behavior:auto}`. Browser verification observed `aria-pressed=true`, `scroll-behavior:auto`, and hero transform reset to `none`.
-4. Capture correction: a full-page capture taken while scrolled placed the sticky header inside the work area. Recaptured from verified `scrollY=0`; this was a capture artifact, not a duplicate header in the page.
+## Fidelity surfaces
 
-No remaining P0/P1/P2 findings. Independent visual review approved the combined reference/implementation comparisons and mobile article. P3: work numerals have tighter kerning than the study and supporting desktop typography is quieter; neither prevents the selected direction or reading.
+- **Typography:** self-hosted Manrope/Cormorant Garamond and a generated handwritten wordmark follow the selected sans/italic/editorial hierarchy. Both languages fit at tested widths; the longer Portuguese desktop headline has a separate size adjustment. Supporting type/numerals remain slightly quieter than the mock (P3).
+- **Spacing/layout:** workshop hero, numbered project bands, adventure panorama, writing and contact follow the reference. Native work/story/learning disclosures deliberately preserve real technical details, CV/education and the existing learning brief. These add height relative to the concept. Header controls and text remain unobstructed.
+- **Colors:** deep ink, warm orange, lilac supporting text and sunset surfaces follow the source. A dark header backdrop protects navigation contrast. Mobile adventure copy uses a pale surface above the illustration to preserve readability.
+- **Imagery:** eight separately generated original assets plus a smaller mobile hero are used, with real transparency on foliage/light/signature. No illustration, signature or icon was replaced with CSS/div/SVG drawings. Existing licensed Feather icons are retained. The selected illustration is fictional art, not professional evidence or a personal photo.
+- **Content:** real career facts, education, project technologies and article routes are retained. The featured Daily Architecture title is a real migrated post and carries its actual `lang`. No fictional metrics, ownership, current employment date or AWS claim for ProsperSync is introduced.
 
-## Required fidelity surfaces
+## Comparison and fix history
 
-- **Fonts and typography:** locally served Manrope for interface/display sans and Cormorant Garamond for italic emphasis, two work headings and article prose. Explicit weights, readable mobile wrapping, no clipped headlines. The name uses an italic text signature rather than inventing a third handwriting font. This is an intentional two-font interpretation of the study.
-- **Spacing and layout rhythm:** full-bleed hero, asymmetric text/art balance, narrow section index, continuous split work bands and pale reading surfaces. Section links account for the sticky header. Both 390-wide language layouts have no horizontal document overflow.
-- **Colors and tokens:** near-black aubergine, porcelain, warm orange and pale lilac carry across the portfolio/archive/article surfaces. Light sections have their own dark text/link tokens. Focus indicators remain visible. No formal automated contrast or Lighthouse score is claimed.
-- **Image quality:** four original glass/filament scenes, correctly fitted to their slots; responsive smaller hero, intrinsic dimensions and lazy supporting art. Five production WebP files total 303,354 bytes. No CSS illustration stand-ins, fake product screenshots or new external image dependencies.
-- **Copy and content:** real career/project summaries and `getPosts()` data are used. The mock's invented article titles and unsupported ProsperSync AWS tag were rejected. Twenty migrated article bodies, dates/languages, translations, image references, feed and URL data remain unchanged. Meaningful heading spaces, archive heading hierarchy and a focusable skip target were added.
+1. Initial desktop comparison: navigation crossed bright sky with inadequate contrast. Fixed with a dark header backdrop. Corrected the featured article to the reference's real Daily Architecture post and added the article's language on the PT homepage.
+2. Initial mobile check: the floating pause control could overlap reading content. Moved it into the persistent header, sharing state through a small context. Rechecked pause/resume, menu Escape/focus and bilingual navigation.
+3. Source review found minimum-width pressure below 380px. Added a compact header and headline treatment. Browser measurements passed 320, 360 and 390px in EN/PT: header fits, heading fits and no document overflow.
+4. Desktop PT measurement found a 472px headline in a 440px copy column. Reduced its desktop display size; final measurement is 440px/440px, with no overflow.
+5. Mobile visual comparison found adventure text on a busy image area. Moved mobile copy onto the pale surface above the artwork. Final EN/PT comparison passes.
+6. Corrected nondeterministic capture state by pausing motion for final screenshots, and adjusted desktop artwork crop/numeral sizing. Final combined and focused comparisons pass, with only the P3 optical differences below.
 
-## Interaction verification
+## Functional and technical evidence
 
-- Fine-pointer click/movement over the hero produced a nonzero translated/scaled artwork matrix; the text and controls did not move with it.
-- In-page Reduce motion control resets artwork and disables smooth anchor scrolling. OS preference changes are implemented in the same cleanup/guard path and CSS media query and passed independent source review; an actual OS-level reduced-motion setting was not changed/emulated during this run.
-- Short scroll entrances enhance already-visible server content. There is no permanent hidden-content class, endless animation loop or animation dependency. Cleanup removes observers/listeners/frames and active animations.
-- Mobile menu opens; Escape closes it and returns focus to its button. Keyboard Shift+Tab reached the skip link; Enter focused `main-content`.
-- English/Portuguese home switching, writing entry, actual local-models article translation and mobile article/code-block layout passed. An untranslated article retains the existing alternate-index behavior through unchanged route logic/export checks.
-- Browser error/warning log was empty for inspected flows. Lazy images outside the viewport were not mislabeled as failures; loaded-image failure inspection returned none.
-- Web typecheck, lint, six feed tests and the final production build/export gate passed. The export gate verified 29 routes, 20 articles, RSS/discovery and 90 local asset references, including headings, languages, canonical metadata, dates and translations. Unchanged API/infrastructure checks and the earlier AWS 197-path audit were not repeated.
+- Current web production build, TypeScript compilation and static export gate passed: 29 routes, 20 articles, RSS and 89 local article-asset references. Web lint and all six feed tests passed. A generated type-cache duplication and a later stalled build were resolved by isolating generated cache; no source checks were bypassed.
+- Nine new WebP assets passed local HTTP status, MIME and SHA-256 checks against source files (1,458,080 bytes total); RSS and a true 404 passed. This is local verification, not an AWS release.
+- Chrome verified homepages in EN/PT at 1440 × 900 and mobile measurements at 320/360/390 × 844. Both language routes and headings fit without horizontal overflow.
+- Live tree transforms changed over time. Manual pause changed all tree animation names to `none`; resume restored visible ambient layers to `running`. Scrolling to the story changed hero layers to `paused` and story layers to `running`.
+- Native work/story disclosures expand and expose their real content/education. Mobile menu opens with four links; Escape closes it and returns focus. Keyboard skip focuses `main-content`.
+- Actual featured article reading and writing index navigation passed; the index has 20 cards. The real EN-to-PT Copilot article translation opened a Portuguese body with four code blocks, without page overflow. Article pages correctly omit the homepage motion toggle.
+- Browser error logs were empty in the final verification session. Independent source/content/React review approved after the language and narrow-header fixes; independent visual review approved the final combined captures.
 
-## Completion checklist
+## Limits and P3 polish
 
-- [x] Selected study resolved from displayed option 3.
-- [x] Actual artwork, licensed local fonts/icons and responsive layouts implemented.
-- [x] Primary navigation, reading and motion controls verified in Chrome.
-- [x] Combined comparisons reviewed; P0/P1/P2 findings resolved.
-- [x] Local verified preview available; production unchanged pending publication.
+Actual OS reduced-motion emulation and a hidden-tab visibility transition were not established in this browser session. The OS CSS/query path and visibility cleanup are source-reviewed; the manual reduced-motion path is verified live. No global device setting was changed. No formal Lighthouse score, new AWS deployment, DNS change, infrastructure change or full Medium ZIP claim is made.
+
+P3: desktop numerals/supporting typography are quieter than the study. The signature has subtle raster brush texture. These do not block the selected visual direction or core flows; do not loop on cosmetic polish without new feedback.
+
+Implementation checklist: selected artwork installed; responsive bilingual layout verified; motion/pause and core journeys verified; material findings fixed; final combined visual comparison passed; production publication remains a separate next action.

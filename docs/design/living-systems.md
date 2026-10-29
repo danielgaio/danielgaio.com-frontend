@@ -1,3 +1,5 @@
+> Historical study: Daniel selected the subsequent [Curiosity in Motion](curiosity-in-motion.md) direction on October 29, 2026. Its motion behavior and QA supersede this earlier implementation.
+
 # Living Systems visual identity
 
 Daniel selected the third displayed design study on October 28, 2026: the dark composition with an orange path through upright glass planes. This replaces the original cream-and-orbit appearance while keeping the portfolio, personal story, AWS learning and bilingual writing structure.

@@ -1,0 +1,78 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "mode": "built-in image_gen.imagegen",
+      "assets": [
+        {
+          "output": "hero.png",
+          "operation": "targeted edit of generated hero illustration",
+          "transparent_background": false,
+          "reference_basenames": [
+            "hero.png"
+          ],
+          "reference_note": "Earlier generated hero asset, before grille emblem/license-plate cleanup; earlier generation was grounded by hero-ref.png.",
+          "prompt": "Precise targeted edit of supplied image. Preserve absolutely everything: exact scene, composition, two fictional anime characters highfiving, motorcycle, blue car, workshop, lighting,colors,aspectratio,emptydarkleft38%, allpixelsoutside tiny brandingareas. Change ONLY the bluecar grille emblem and licenseplate markings: REMOVE the small gold symbol at center of grille, replacing it seamlessly with continuous blackgrillemesh; replace plate letters/markings with plain unmarked mutedblue/black metal so there are NO readable letters or symbols. Also remove any tiny manufactureremblems onmotorcycleifpresent without changing forms. No new text orlogo. Do not crop, reframe, add objects, change characters or redesign anything. Output single corrected production illustration atsamewide dimensions."
+        },
+        {
+          "output": "signature.png",
+          "operation": "targeted refinement of generated wordmark",
+          "transparent_background": true,
+          "reference_basenames": [
+            "signature.png"
+          ],
+          "reference_note": "First generated signature asset; initial generation was grounded by website-anime-adventure-concept.png. The final retained file is the second pass, not the later discarded fresh generation.",
+          "prompt": "Refine supplied handletteredwordmark only. Preserve exact readable wording 'Daniel Gaio', overall letterforms, horizontal composition and aspectratio. Make ink strokes MUCH THINNER, elegant finepointpenline rather than thickbrush. Clean smooth continuous offwhite #f7f3f0 stroke edges. Remove ALL speckles, chalktexture, grunge, brushbreaks, internalgraylines,shadows,dirtyhalos and extraneousmarks around letters; transparentareas mustbepristine fullytransparent. A smoothunbrokenfineline signature-style illustrativewordmark, stilllegible at190pxwide, high-quality anti-aliasedrasteredges. Originalillustration not a realhandwrittensignature. Transparentbackground truealpha, no rectangularfill, no blackbackgroundpixels, no addedwords, no watermark. No font-substitution typedserif. Output only the refined smooththin whiteinkhandlettering."
+        }
+      ]
+    },
+    {
+      "mode": "built-in image_gen.imagegen",
+      "assets": [
+        {
+          "asset": "work-1.png",
+          "referenceBasename": "work1-ref.png",
+          "prompt": "Use case: illustration-story. Asset type: wide editorial project illustration for financial-services software engineering. Create ONE standalone WIDE BANNER, target1536x512pixels (3:1), crisp hand-inked 2D ANIME WORKSHOP artwork matching the attached reference's visual style, composition, subjects and palette. Referenceimage is the exact art-direction source, not a layout to copy as UI. A quiet nighttime engineer's workbench against a deep navy/ink wall. Central floating physical modular data cubes, charcoal navy casings with warm cream tops, small gold/orange power indicators and cyan connection ports. Thin luminous orange and cyan physical connections pass fromcube tocube across composition. Abstract glasslike display panels onwall: one circular chart, a few simple flowlines and checkbox-like marks, absolutely NO legible letters, words or numbers. Small pottedleaves framing leftandright and modest desk stationery atfar right. Warmorange lamplight contrasts with subdued cyan screenlight. Visibly illustrated 2D linework, beautifully controlled anime celshading and handpainted backgroundtexture, cohesive withreference. Not photoreal, not3Drender, not genericdashboard; no actualbankbranding, actualbankarchitecture, fakeproductclaim, logo, watermark orUIoverlay. All important cubes/panels arranged around the CENTRAL HORIZONTAL STRIP so the artwork can safely crop vertically into an800x180 webpagebanner; no importantobjects atverytop/bottom. Keep dense detailconcentratedacross middle, atmospheric darknavy edges, attractive clean silhouette and subtle cinematicwarmglow. Outputartonly, no text orpanel bordersaroundwholeimage."
+        },
+        {
+          "asset": "work-2.png",
+          "referenceBasename": "work2-ref.png",
+          "prompt": "Use case: illustration-story. Asset type: wide editorial banner for a softwareengineer's expensecapture project. Create ONE standalone1536x512pixel (3:1) artwork matching attachedreference's exact hand-inked2Danime celshading/workshopstyle and composition. Deep ink-navy nighttime desk backdrop with restrained warmorange andcyan/violet displayglow. Leftthird: curlingpaperreceipts andsmallhandwrittennotes with ONLY abstract horizontalmarks, no legiblewords/letters/numbers, a little pottedleaf atfaredge. Nearleftcenter: tilted modernsmartphone in3/4view, itsdisplay showing genericcreamreceiptlikeabstractrows andtinygeometricbuttons, no realbrandoractualproductUI. Central floating smallviolet-bluevoice-wavecard withmicrophonesilhouette/abstractwave, a few thinluminousorangearrows carry the input towardright. Rightthird: organized floating genericfinanceinterfacepanels with cleanabstractformrows/checks/charts, illustratedasphysical/lightpanels notscreenreadabletext. Same visualnarrative asreference: messyreceipts andvoiceinput become structuredorganizedinformation. Finelycontrolledinkoutlines, animebackgroundpainterlytextures, tastefulcelshading, cinematicwarmglow, readableobjects. Importantobjects stayacrossCENTRALhorizontalstrip soimagecropssafely into800x180webbanner; leavevisualbreathingroom attop/bottom. No text/logo/brand/watermark/pageheader/UIoverlay/border, no claimthisisactualproductscreen, notphotorealor3Drender. Outputonlythecohesiveartwork fillingwideframe."
+        },
+        {
+          "asset": "work-3.png",
+          "referenceBasename": "work3-ref.png",
+          "prompt": "Use case: illustration-story. Asset type: wide abstract editorial banner for AIintegration/backenddelivery engineering project. Generate ONE standalone1536x512pixel (3:1) image that faithfully matches attachedreference's crisp hand-inked2Danime mechanicalworkshop artdirection, subject and composition. A beautifully exploded mechanicalengine/precisionmachine assembly suspended HORIZONTALLY across center: several distinctdarkmetal housings, concentricgears, brassbearingrings, shafts, smallfasteners andcouplers separated alongoneaxis, as anengineer's assemblystudy. Centralbody larger, smallergears recedeleftandright, coherentmanufacturablemechanicalmetaphor notrandommachinery. Behind it, deepnavy/ink workshopwall with delicate cyanblue blueprintlinepanels showing abstractmechanicalschematics and connectionlines, no legibletext/letters/numbers. Restrained luminousorangearrow traversesupperbackground andwarmamberrimlight picksoutmachinededges. A littleoliveleaf/pottedplant silhouettesfarleft, understateddarkwoodworkbench/cabinetedges atbottom. Same animecellshading, thinconfidentinkoutlines, handpaintedbackgroundtexture, shadowdepth andwarmorange/cyanpalette asreference andearliersupportingassets. It is artisticmetaphor for integration/delivery, no actualproductionarchitecture claim, no realproduct/brandlogo, no humans/portraits. Allimportantmachinecomponents occupy CENTRALhorizontalstrip soimagecan cropvertically into800x180webbanner; plentyofatmosphericbleedtopandbottom. Keepentiremachinerysilhouetteintactwithbreathingroomleftandright. Notphotorealor3Drender. Outputonlyfinishedwideartwork, no UI, caption, watermark, frameorborder."
+        }
+      ]
+    },
+    {
+      "mode": "built-in image_gen__imagegen",
+      "assets": [
+        {
+          "file": "story.png",
+          "referenced_image_basenames": [
+            "story-ref.png"
+          ],
+          "transparent_background": false,
+          "prompt": "Use case: illustration-story\nAsset type: a panoramic decorative background for the \"beyond the code\" section of a professional portfolio; no typography.\nInput image 1 is the composition, drawing style, palette and subject reference, not an edit target. Recreate its illustrated overlook as a new original scene WITHOUT ANY TEXT.\nPrimary request: one wide 1536 x 640 hand-drawn 2D anime illustration, warm joyful golden sunset over a softly drawn mountain/city/coast landscape and a curving road. On the RIGHT half, two original fictional adult friends relax on the overlook beside an unbranded blue classic sports car and an orange motorcycle. Faces can be in profile or turned toward the sunset; they are fictional characters, not Daniel or a personal portrait. Keep the car and motorcycle fully recognizable, no brand emblems. Frame the far right and upper-left edges with a few warm leafy branches.\nComposition: this will be cropped to a VERY WIDE 1440 x 270 horizontal band. Place ALL essential friends, car and motorcycle shapes on the RIGHT, within the CENTRAL horizontal band roughly y=190 to y=460. Keep enough sky bleed above and rock/foliage bleed below; do not zoom in. Left 40 percent must remain PALE warm luminous sky and water negative space for a later dark editable headline, low-detail and calm. Distant soft mountain silhouettes may cross its bottom edge. The reference's town, orange sunset and curved road stay in middle/right distance.\nStyle: match reference closely: clean expressive drawn lines, cel-shaded original anime environmental art, soft painted atmosphere and rich warm amber/peach light, friendly curiosity and happiness. Natural landscape supports the scene rather than tourist postcard spectacle.\nConstraints: NO text, NO lettering, NO captions, NO logos, NO brands, NO emblems, NO watermark, NO real destinations or recognizable landmarks. No photorealism, no glossy car advertisement, no racing, no additional vehicles or people. Art direction only, not evidence of owned vehicles or personal trips."
+        },
+        {
+          "file": "foliage.png",
+          "referenced_image_basenames": [
+            "story-ref.png",
+            "story.png"
+          ],
+          "transparent_background": true,
+          "prompt": "Use case: illustration-story. Asset: ONE isolated foliage cutout layer for gentle wind animation, 768 x 1024 portrait.\nBoth input images are STYLE/PALETTE REFERENCES only; do not copy their landscape or other subjects.\nCreate an original hand-inked, cel-shaded 2D anime tree branch. The organic trunk/branch hugs the RIGHT edge and is anchored at the LOWER-RIGHT edge, so a later CSS transform with bottom-right origin can sway it naturally. Thin graceful branches spread inward across the upper-right and right-middle portion. Warm olive and deep navy leaves have delicate golden sunset-lit edges, matching the references' drawn foliage. Leaves are widely spaced, with clear transparent alpha gaps throughout and abundant transparent negative space on the LEFT. Keep the silhouette airy and the drawn linework crisp when displayed at 220 x 300 pixels. Rich but restrained light-and-shadow shapes, not photorealism. \nGenuinely transparent background, preserve alpha. No sky, landscape, ground, opaque rectangle, glow sheet, border, text, logos, characters, cars or motorcycles. No simulated checkerboard. Just the isolated illustrated branch and leaves, no shadow cast onto a background."
+        },
+        {
+          "file": "light.png",
+          "referenced_image_basenames": [],
+          "transparent_background": true,
+          "prompt": "Use case: stylized-concept. Asset: ONE isolated warm light bloom layer for subtle opacity animation over hand-drawn anime project illustrations. Square 512 x 512.\nCreate a small soft amber-golden pool of lamp-like warmth, made of delicate hand-painted translucent pigment and a few tiny irregular golden light motes. The center is only moderately bright, with nuanced painterly texture, not a white-hot flare. Let it fade smoothly to genuine transparency; the ENTIRE outer third around all four edges is fully transparent, with no edge cutoff or rectangular tint. It will be displayed at 150–200 pixels, at maximum 0.18 opacity with screen blending, so the organic brush texture should remain subtle. Warm optimistic sunset/anime lighting, not a flat mathematical CSS gradient.\nTransparent background with preserved alpha. No lamp or object, no sky, no rays or starburst, no rings or geometric shapes, no smoke, no scenery, no characters, no text, no border, no logos, no watermark, no checkerboard drawing. Only a gently feathered warm hand-painted light bloom and sparse delicate motes."
+        }
+      ]
+    }
+  ]
+}

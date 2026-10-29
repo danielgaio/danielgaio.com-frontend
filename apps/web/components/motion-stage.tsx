@@ -1,62 +1,63 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 
-/** Motion is an enhancement: the server-rendered content is always visible. */
-export function MotionStage({ children, locale }: { children: ReactNode; locale: "en" | "pt" }) {
+const reducedMotionQuery = "(prefers-reduced-motion: reduce)";
+function subscribeMotionPreference(notify: () => void) {
+  const query = window.matchMedia(reducedMotionQuery);
+  query.addEventListener("change", notify);
+  return () => query.removeEventListener("change", notify);
+}
+function prefersReducedMotion() { return window.matchMedia(reducedMotionQuery).matches; }
+
+const MotionContext = createContext<{ paused: boolean; systemReduced: boolean; toggle: () => void } | null>(null);
+
+export function MotionToggle({ locale }: { locale: "en" | "pt" }) {
+  const motion = useContext(MotionContext);
+  if (!motion) return null;
+  const reduced = motion.paused || motion.systemReduced;
+  const label = motion.systemReduced ? (locale === "pt" ? "Movimento reduzido pelo dispositivo" : "Motion reduced by your device") : reduced ? (locale === "pt" ? "Retomar movimento" : "Resume motion") : (locale === "pt" ? "Pausar movimento" : "Pause motion");
+  return <button className="motion-toggle" type="button" aria-label={label} title={label} aria-pressed={reduced} disabled={motion.systemReduced} onClick={motion.toggle}><span>{locale === "pt" ? "Movimento" : "Motion"}</span><span aria-hidden="true">{reduced ? (locale === "pt" ? "Pausado" : "Paused") : (locale === "pt" ? "Ativo" : "On")}</span></button>;
+}
+
+/** Content is visible before hydration; motion only enhances visible illustrations. */
+export function MotionStage({ children }: { children: ReactNode }) {
   const [paused, setPaused] = useState(false);
+  const systemReduced = useSyncExternalStore(subscribeMotionPreference, prefersReducedMotion, () => false);
+  const reduced = paused || systemReduced;
   const root = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const node = root.current;
-    if (!node) return;
-    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
-    let stop = () => {};
-    const configure = () => {
-      stop();
-      if (preference.matches || paused) return;
-      const animations = new Set<Animation>();
-      const seen = new WeakSet<Element>();
-      const observer = typeof IntersectionObserver === "undefined" ? null : new IntersectionObserver(entries => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting || seen.has(entry.target)) continue;
-          seen.add(entry.target);
-          observer?.unobserve(entry.target);
-          const animation = entry.target.animate([
-            { opacity: 0.15, transform: "translateY(24px)" },
-            { opacity: 1, transform: "translateY(0)" },
-          ], { duration: 800, easing: "cubic-bezier(.2,.7,.2,1)" });
-          animations.add(animation);
-          animation.onfinish = () => animations.delete(animation);
-        }
-      }, { threshold: 0.08 });
-      node.querySelectorAll("[data-reveal]").forEach(element => observer?.observe(element));
-      const hero = node.querySelector<HTMLElement>(".hero");
-      const artwork = node.querySelector<HTMLElement>(".hero-artwork");
-      let frame = 0;
-      const reset = () => { cancelAnimationFrame(frame); if (artwork) artwork.style.transform = ""; };
-      const move = (event: PointerEvent) => {
-        if (!hero || !artwork || !finePointer.matches || event.pointerType !== "mouse") return;
-        const bounds = hero.getBoundingClientRect();
-        const x = (event.clientX - bounds.left) / bounds.width - 0.5;
-        const y = (event.clientY - bounds.top) / bounds.height - 0.5;
-        cancelAnimationFrame(frame);
-        frame = requestAnimationFrame(() => { artwork.style.transform = `translate3d(${x * 14}px,${y * 10}px,0) scale(1.025)`; });
-      };
-      const revealFocusedContent = () => animations.forEach(animation => animation.finish());
-      hero?.addEventListener("pointermove", move);
-      hero?.addEventListener("pointerleave", reset);
-      node.addEventListener("focusin", revealFocusedContent);
-      finePointer.addEventListener("change", reset);
-      stop = () => {
-        observer?.disconnect(); animations.forEach(animation => animation.cancel()); animations.clear(); reset();
-        hero?.removeEventListener("pointermove", move); hero?.removeEventListener("pointerleave", reset);
-        node.removeEventListener("focusin", revealFocusedContent); finePointer.removeEventListener("change", reset);
-      };
+    if (!node || reduced) return;
+    const animations = new Set<Animation>();
+    const seen = new WeakSet<Element>();
+    const visibility = () => { node.dataset.motionRunning = String(!document.hidden); };
+    visibility();
+    document.addEventListener("visibilitychange", visibility);
+    const observer = typeof IntersectionObserver === "undefined" ? null : new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        entry.target.classList.toggle("motion-visible", entry.isIntersecting);
+        if (!entry.isIntersecting || !entry.target.hasAttribute("data-reveal") || seen.has(entry.target)) continue;
+        seen.add(entry.target);
+        const animation = entry.target.animate([
+          { opacity: 0.3, transform: "translateY(16px)" },
+          { opacity: 1, transform: "translateY(0)" },
+        ], { duration: 650, easing: "cubic-bezier(.2,.7,.2,1)" });
+        animations.add(animation);
+        animation.onfinish = () => animations.delete(animation);
+      }
+    }, { threshold: 0.04 });
+    node.querySelectorAll("[data-reveal], [data-ambient]").forEach(element => observer?.observe(element));
+    const focus = () => animations.forEach(animation => animation.finish());
+    node.addEventListener("focusin", focus);
+    return () => {
+      observer?.disconnect();
+      animations.forEach(animation => animation.cancel());
+      document.removeEventListener("visibilitychange", visibility);
+      node.removeEventListener("focusin", focus);
+      node.querySelectorAll(".motion-visible").forEach(element => element.classList.remove("motion-visible"));
+      node.dataset.motionRunning = "false";
     };
-    configure();
-    preference.addEventListener("change", configure);
-    return () => { stop(); preference.removeEventListener("change", configure); };
-  }, [paused]);
-  return <div ref={root} className={paused ? "motion-paused" : undefined}>{children}<div className="container motion-controls"><button type="button" aria-pressed={paused} onClick={() => setPaused(value => !value)}>{locale === "pt" ? "Reduzir movimento" : "Reduce motion"}<span aria-hidden="true">{paused ? (locale === "pt" ? "Ativado" : "On") : (locale === "pt" ? "Desativado" : "Off")}</span></button></div></div>;
+  }, [reduced]);
+  return <MotionContext.Provider value={{ paused, systemReduced, toggle: () => setPaused(value => !value) }}><div ref={root} className={`motion-stage${reduced ? " motion-paused" : ""}`}>{children}</div></MotionContext.Provider>;
 }
