@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-31",
+  "issue": "https://github.com/danielgaio/danielgaio.com-frontend/issues/6",
+  "evidenceType": "read-only AWS billing response summary",
+  "expectedExistingAccountVerified": true,
+  "attribution": {
+    "metric": "UnblendedCost",
+    "granularity": "DAILY",
+    "startInclusive": "2026-10-29",
+    "endExclusive": "2026-11-01",
+    "groupBy": [
+      "TAG:Project",
+      "DIMENSION:SERVICE"
+    ],
+    "projectValue": "DanielGaioWebsite",
+    "taggedServices": [
+      "Amazon Simple Storage Service",
+      "Amazon Route 53",
+      "Amazon CloudFront"
+    ],
+    "nonzeroTaggedServices": [
+      "Amazon Simple Storage Service",
+      "Amazon Route 53"
+    ],
+    "zeroCostTaggedServices": [
+      "Amazon CloudFront"
+    ],
+    "untaggedEntriesObserved": true,
+    "remainingPage": false
+  },
+  "accountCostCheck": {
+    "metric": "UnblendedCost",
+    "granularity": "MONTHLY",
+    "startInclusive": "2026-10-01",
+    "endExclusive": "2026-11-01",
+    "allServicesIncluded": true,
+    "taxIncludedInReportedTotal": true,
+    "reportedTotalWithinMonthlyTarget": true,
+    "remainingPage": false
+  },
+  "budget": {
+    "monthlyTargetUSD": 10,
+    "scope": "account-wide",
+    "taxIncluded": true,
+    "emailSubscriberPresentForEachAlert": true,
+    "actualAlertPercentages": [
+      85,
+      100
+    ],
+    "forecastAlertPercentages": [
+      100
+    ],
+    "enforcesHardCap": false
+  },
+  "limitations": [
+    "Every returned cost period is estimated; October 31 is incomplete.",
+    "Daily attribution and monthly account totals cover different periods and must not be equated.",
+    "The Project-tagged subtotal does not capture all website, shared or account charges.",
+    "Tagged CloudFront entries demonstrate group visibility, not a nonzero charge.",
+    "No future-spend guarantee or finalized invoice is claimed."
+  ],
+  "privateEvidenceExcluded": [
+    "bill amounts",
+    "account and identity identifiers",
+    "recipient addresses",
+    "authentication details"
+  ],
+  "cloudMutationsPerformed": false,
+  "deploymentPerformed": false
+}
